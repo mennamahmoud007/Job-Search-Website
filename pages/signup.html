@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Sign Up - JobBoard </title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #EDE9FE;
+            font-family: Arial, Helvetica, sans-serif;
+        }  
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #C4B5FD;
+            border-radius: 5px;
+     
+        }
+
+        .navbar {
+            background-color: #2E1A47;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #A78BFA;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form-title {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+           
+        }
+
+        .nav-links a {
+            color: #E9D5FF;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: #C4B5FD;
+        }
+
+         form {
+            background-color: #F3E8FF;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]{
+            background-color: #7C3AED;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        label {
+            text-align: center;
+            display: block;
+        }
+
+        button {
+            margin: auto;
+            background-color: #7C3AED;
+            color: white;
+            display: block;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+         button:hover {
+            background-color: #6D28D9;
+        }
+
+        .company_name_field {
+            display: none;
+        }
+    
+        #is_company_admin:checked ~ .company_name_field {
+            display: block;
+        }
+
+       
+
+    </style>
+   
 </head>
 <body>
-    
+    <nav class = "navbar">
+        <div class="logo"> JobBoard </div>
+        <ul class="nav-links">
+            <li><a href="home.html"> Home </a></li>
+            <li><a href="browse.html"> Browse Jobs </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="signup.html"> Sign Up </a></li>
+        </ul>
+    </nav>
+    <div class ="container">
+    <h2 class="form-title"> Create an Account </h2>
+
+    <form action="#" method="POST">
+
+        <label for="username"> Username: </label> <br>
+        <input type="text" id="username" name="username" required /> <br><br>
+
+         <label for="password"> Password: </label> <br>
+        <input type="password" id="password" name="password" required> <br><br>
+
+        <label for="confirm_password"> Confirm Password: </label> <br>
+        <input type="password" id="confirm_password" name="confirm_password" required> <br><br>
+
+        <label for="email"> Email: </label> <br>
+        <input type="email" id="email" name="email" required> <br><br>       
+
+        <label for="is_company_admin">  Register as a Company Admin </label> <br>
+        <input type="checkbox" name="is_company_admin" id="is_company_admin"> <br><br>
+
+        <div class="company_name_field">
+             <label for="company_name"> Company Name: </label> <br>
+             <input type="text" id="company_name" name="company_name" required> <br><br>
+
+        </div>
+
+        <label for="is_admin" > Register as a User </label> <br>
+        <input type="checkbox" name="is_admin" id="is_admin"> <br><br> 
+
+
+        <button type="submit"> Sign Up </button>
+    </form>
+    <p> Already have an account? <a href="login.html"> Log in </a> </p>
+
+    </div>
 </body>
-</html>
+
+</html>    
