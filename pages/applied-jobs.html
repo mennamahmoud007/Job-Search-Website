@@ -2,69 +2,108 @@
 <head>
     <title>My Applied Jobs</title>
 </head>
+
 <body>
-  
-    <nav style="background-color: rgba(219, 219, 218, 0.866); ">
-    <table width = "100%">
+
+<nav style="background-color: rgb(145,105,174); padding:10px;">
+    <table width="100%">
 
         <tr>
-        <td>       
-        <h1 style="color: rgba(48, 10, 129, 0.919);"> JobFinder </h1>
-        </td>
 
-        <td align="right">
-            <a href="../pages/browse.html">Browse Jobs</a> &nbsp;&nbsp;&nbsp;
-            <a href="../pages/applied-jobs.html">My Applied Jobs</a> &nbsp;&nbsp;&nbsp;
-            <a href="../pages/login.html">Logout</a>
-        </td>
+            <td>
+            <h1 style="color: antiquewhite;">JobBoard</h1>
+            </td>
+
+            <td align="right">
+                <a href="../pages/browse.html" style="color:antiquewhite;"><b>Browse Jobs</b></a> &nbsp;&nbsp;&nbsp;
+                <b style="color:antiquewhite;">My Applied Jobs</b> &nbsp;&nbsp;&nbsp;
+                <a href="../pages/login.html" style="color:antiquewhite;"><b>Logout</b></a>
+            </td>
+
         </tr>
-    </table>
-    </nav>
-      
-   
-  
-
-    
-
-    <h1 align="center" ><b>My Applications</b></h1>
-
-    <table border="1" width="100%"  cellpadding="10">
-
-      
-        
-        <thead>
-            <tr>
-                <th>Job Title</th>
-                <th>Company</th>
-                <th>Application Status</th>
-            </tr>
-        </thead>
-
-        <tbody>
-                        
-
-            <tr style="background-color: rgb(248, 217, 160);">
-                <td>Frontend Developer</td>
-                <td>Google</td>
-                <td align="center"><b>Pending</b></td>
-            </tr>
-
-            <tr style="background-color: rgb(193, 244, 193);">
-                <td>Data Analyst</td>
-                <td>Amazon</td>
-                <td align="center"><b>Accepted</b></td>
-            </tr>
-
-            <tr style="background-color: rgb(237, 172, 172);">
-                <td>Backend Developer</td>
-                <td>Microsoft</td>
-                <td align="center" ><b>Rejected</b></td>
-            </tr>
-                            
-        </tbody>
 
     </table>
+</nav>
 
-    
+<br>
+
+<h1 align="center">My Applications</h1>
+
+<p align="center" style="font-size: 18px; color: rgb(46, 4, 87);">
+Track the status of the jobs you applied for and monitor your progress
+</p>
+
+
+<br>
+
+
+<table border="1" width="40%" align="center" cellpadding="10">
+
+    <tr align="center" style="background-color: rgb(203, 206, 209);">
+        <th>Total Applications</th>
+        <th>Under Review</th>
+        <th>Accepted</th>
+        <th>Rejected</th>
+    </tr>
+
+    <tr align="center">
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+
+</table>
+
+
+<br><br>
+
+
+<table border="1" width="80%" align="center" cellpadding="10">
+
+    <thead>
+        <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Location</th>
+            <th>Applied Date</th>
+            <th>Status</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+
+        <tr style="background-color: rgb(248,217,160);">
+            <td>Frontend Developer</td>
+            <td>TechCorp</td>
+            <td>Cairo</td>
+            <td>May 10</td>
+            <td align="center"><b>Under Review</b></td>
+            <td align="center"><a href="../pages/job-details.html">View Job</a></td>
+        </tr>
+        <tr style="background-color: rgb(193,244,193);">
+            <td>Data Analyst</td>
+            <td>Insight Co</td>
+            <td>Remote</td>
+            <td>May 12</td>
+            <td align="center"><b>Accepted</b></td>
+        <td align="center"><a href="../pages/job-details.html">View Job</a></td>
+        </tr>
+        <tr style="background-color: rgb(237,172,172);">
+            <td>Backend Developer</td>
+            <td>NexaSoft</td>
+            <td>Cairo</td>
+            <td>May 15</td>
+            <td align="center"><b>Rejected</b></td>
+            <td align="center"><a href="../pages/job-details.html">View Job</a></td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
 </body>
 </html>
