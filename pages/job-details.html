@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Details</title>
     <link rel="stylesheet" href="../StyleSheet.css" >
+    <style>
+        .button{
+             background-color: rgb(145, 105, 174);
+                color: white;
+                border: none;
+                border-radius: 16px;
+                padding-right: 15px;
+                padding-left: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 16px;
+                cursor: pointer;
+                margin-bottom: 10 px;
+        }
+        .share{
+            background-color: rgb(235, 237, 240);
+            color:rgb(77, 97, 130);
+            border: none;
+            border-radius: 16px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+        }
+
+    </style>
+    
 </head>
 <body>
      <nav class="navbar">
@@ -18,19 +48,17 @@
     <main>
     <section>
         <h1 >Job Title</h1> 
-        <p><span>full-time</span> <span> remote</span></p>
-        <p>Company Name</p>
-        <p>Location</p>
+        <p><span>full-time</span>   <span> remote</span></p>
+        <P>Job category</P>
     </section>
 
     <section>
     <div>
         <h3> job details</h3>
         <ul>
-            <li>Experience</li>
-            <li> Education level</li>
+            <li>job status</li>
+            <li> job description</li>
             <li>Salary</li>
-            <li> job category</li>
         </ul>
     </div>
     <div>
@@ -38,6 +66,7 @@
         <ul>
             <li>Education</li>
             <li>Experience</li>
+            <li> gender preference</li>
             <li>tech skills</li>
             <li> soft skills</li>
         </ul>
@@ -56,9 +85,9 @@
 
     <aside>
         <div>
-        <button>Apply Now</button>
-        <button>Save Job</button>
-        <button>Share Job</button>
+        <button class="button">Apply Now</button> 
+        <button class="button">Save Job</button> <br>
+        <button class="share">Share </button>
         </div>
         <div>
 

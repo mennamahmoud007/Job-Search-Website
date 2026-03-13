@@ -36,11 +36,15 @@
         <label for="job-title"> Job Title: </label>
         <input type="text" id="job-title" name="job-title" placeholder="e.g. Software Engineer" required> <br><br>
 
-        <label for="job-salary"> Salary: </label>
-        <input type="number" id="job-salary" name="job-salary" placeholder=" Enter Salary" required> <br><br>
+        <label for="job-type"> Job Type: </label>
+        <select id="job-type" name="job-type" required>
+            <option value="full-time"> Full-time</option>
+            <option value="part-time"> Part-time</option>
+            <option value="remote"> Remote</option>
+        </select> <br><br>
 
-        <label for="company-name"> Company Name: </label>
-        <input type="text" id="company-name" name="company-name" placeholder="Enter Company Name" required> <br><br>
+        <label for="category"> Job Category: </label>
+        <input type="text" id="category" name="category" placeholder="e.g. IT, Marketing" required> <br><br>
 
         </fieldset>
 
@@ -55,10 +59,68 @@
 
         <label for="job-description"> Job Description: </label>
         <textarea id="job-description" name="job-description" rows="5" cols="50" placeholder="Enter Job Description" required></textarea> <br><br>
-        
+
+        <label for="job-salary"> Salary: </label>
+        <input type="number" id="job-salary" name="job-salary" placeholder=" Enter Salary" required> <br><br>
+
+        </fieldset>
+
+        <fieldset>
+        <legend> Job Requirements </legend>
+
+        <label for="education"> Education Level: </label>
+        <select id="education" name="education" required>
+            <option value="high-school"> High School</option>
+            <option value="diploma"> Diploma</option>
+            <option value="bachelor"> Bachelor’s Degree</option>
+            <option value="master"> Master’s Degree</option>
+            <option value="phd"> PhD</option>
+            <option value="other"> Other</option>
+        </select> <br><br>
+
         <label for="experience"> Years of Experience: </label>
         <input type="number" id="experience" name="experience" placeholder="e.g. 2" required> <br><br>
 
+        <label for="gender"> Preferred Gender: </label>
+        <select id="gender" name="gender" required>
+            <option value="male"> Male</option>
+            <option value="female"> Female</option>
+            <option value="any"> Any</option>
+        </select> <br><br>
+
+        <label for="tech-skills"> Technical Skills: </label>
+        <input type="text" id="tech-skills" name="tech-skills" placeholder="e.g. HTML, CSS, Python, JavaScript" required> <br><br>
+
+        <label for="soft-skills"> Soft Skills: </label>
+        <input type="text" id="soft-skills" name="soft-skills" placeholder="e.g. Communication, Teamwork, Problem-solving" required> <br><br>
+
+        </fieldset>
+
+        <fieldset>
+        <legend> Job Benefits </legend>
+
+        <label for="benefits"> Benefits: </label>
+        <textarea id="benefits" name="benefits" rows="5" cols="50" placeholder="e.g. Health Insurance, Retirement Plan, Flexible Working Hours, Professional Development" required></textarea> <br><br>
+        
+        </fieldset>
+
+        <fieldset>
+        <legend> Company Information </legend>
+
+        <label for="company-name"> Company Name: </label>
+        <input type="text" id="company-name" name="company-name" placeholder="Enter Company Name" required> <br><br>
+
+        <label for="industry"> Industry: </label>
+        <input type="text" id="industry" name="industry" placeholder="e.g. IT, Marketing" required> <br><br>
+
+        <label for="company-size"> Company Size: </label>
+        <input type="number" id="company-size" name="company-size" placeholder="e.g. 50" required> <br><br>
+
+        <label for="location"> Location: </label>
+        <input type="text" id="location" name="location" placeholder="Enter Job Location" required> <br><br>
+
+
+        
         </fieldset>
 
         <fieldset>
@@ -69,9 +131,8 @@
         </fieldset>
 
     <button type="submit"> Add Job </button>
+    <button type="reset"> Reset Form </button>
     </form>
-
-
 
 </body>
 </html>
