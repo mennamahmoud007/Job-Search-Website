@@ -1,0 +1,37 @@
+body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+         /*___NAVBAR___*/
+        .navbar{
+            display: flex;
+            justify-content: space-between ;
+            align-items: center;
+            background-color: rgb(145, 105, 174);
+            color:antiquewhite;
+            padding: 15px 30px; 
+            position: sticky;
+            top: 0px;
+        
+        }
+        .navLinks{
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+        }
+        .navLinks a{
+            color:antiquewhite;
+            text-decoration: none;
+        }
+        .navLinks a:hover{
+            color:rgb(106, 57, 152);
+            text-decoration: underline;
+        }
+        .logo{
+            font-weight: 800;
+            font-size: 20px;
+        }
+   
+       
+          
