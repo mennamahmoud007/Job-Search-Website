@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8/">
+    <title> Log in form </title>
 </head>
+
 <body>
-    
+    <div align="right" class="navbar">
+        <a href="home.html">Home</a>
+        <a href="browse.html">Browse Jobs</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div align="center" class="formbox">
+        <h2>Fill the form! </h2>
+        <br>
+        <form>
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" name="username" placeholder="Username or email" required> <br><br>
+            <label for="password"> <b>Password:</b></label>
+            <input type="password" id="password" name="password" placeholder="Password"> <br><br>
+            <input type="submit" value="Log in">
+            <br>
+            <p>Don't have an account?
+                <a href="signup.html">Sign up</a>
+            </p>
+        </form>
+    </div>
 </body>
+
 </html>
