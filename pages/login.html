@@ -3,31 +3,51 @@
 
 <head>
     <meta charset="UTF-8/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Log in form </title>
 </head>
 
 <body>
-    <div align="right" class="navbar">
-        <a href="home.html">Home</a>
-        <a href="browse.html">Browse Jobs</a>
-        <a href="signup.html">Sign Up</a>
-    </div>
+    <table width="100%" bgcolor="#9169AE" cellpadding="15">
+        <tr>
+            <td>
+                <font size="5"><b>JobBoard</b></font>
+            </td>
+            <td align="right">
+                <font>
+                    <a href="home.html">
+                        <b>Home</b>
+                    </a>
+                    <a href="browse.html">
+                        <b>Browse Jobs</b>
+                    </a>
+                    <a href="signup.html">
+                        <b>Sign Up</b>
+                    </a>
+                </font>
+        </tr>
+    </table>
     <br><br><br><br><br><br><br>
-    <div align="center" class="formbox">
-        <h2>Fill the form! </h2>
-        <br>
-        <form>
-            <label for="username"><b>Username:</b></label>
-            <input type="text" id="username" name="username" placeholder="Username or email" required> <br><br>
-            <label for="password"> <b>Password:</b></label>
-            <input type="password" id="password" name="password" placeholder="Password"> <br><br>
-            <input type="submit" value="Log in">
-            <br>
-            <p>Don't have an account?
-                <a href="signup.html">Sign up</a>
-            </p>
-        </form>
-    </div>
+    <table width="30%" align="center" border="1" cellpadding="50">
+        <tr align="center">
+            <td>
+                <h2>Fill the form! </h2>
+                <br>
+
+                <form>
+                    <label for="username"><b>Username:</b></label>
+                    <input type="text" id="username" name="username" placeholder="Username or email" required> <br><br>
+                    <label for="password"> <b>Password:</b></label>
+                    <input type="password" id="password" name="password" placeholder="Password"> <br><br>
+                    <br>
+                    <input type="submit" value="Log in">
+                    <br>
+                    <p>Don't have an account?
+                        <a href="signup.html">Sign up</a>
+                    </p>
+                </form>
+        </tr>
+        </div>
 </body>
 
 </html>
