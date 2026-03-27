@@ -1,37 +1,413 @@
-body {
-            margin: 0;
-            font-family: sans-serif;
+:root {                                    /* color palette */
+      --deep:    #3B1E54;
+      --mid:     #9B7EBD;
+      --light:   #D4BEE4;
+      --pale:    #EEEEEE;
+      --white:   #ffffff;
+    }
+ 
+  /* Global styles */
+    body {
+      font-family:"Times New Roman", Times, serif;
+      background: var(--pale);
+      color: var(--deep);
+      overflow-x: hidden;
+      margin: 0 ;
+       padding: 0;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 60px;
+      background: var(--light);
+      border-bottom: 1px solid var(--light);
+      position: sticky;
+      top: 0;
+       z-index: 100;
+    }
+
+    /* Logo */
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--deep);
+      letter-spacing: 2px;
+    }
+    .logo span { 
+        color: var(--white); 
+    }
+    
+    /* Navigation Links */
+    .navLinks {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .navLinks a {
+      text-decoration: none;
+      color: var(--deep);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .navLinks a:hover {
+      color: var(--mid);
+    }
+    .navLinks .nav-cta {
+      background: var(--deep);
+      color: var(--white) !important;
+      padding: 9px 22px;
+      border-radius: 40px;
+      transition: background 0.2s !important;
+    }
+    .navLinks .nav-cta:hover {
+     background: var(--mid) !important;
+    }
+
+    /* Hook */
+    .hook {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 40px 60px;
+      background: var(--white);
+      position: relative;
+    }
+    .hook::after {
+      content: '';
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--light) 0%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0.5;
+    }
+    .hook-text { 
+        z-index: 1;
+     }
+
+    .hook-badge {
+      display: inline-block;
+      background: var(--light);
+      color: var(--deep);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+    }
+
+    .hook h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--deep);
+      margin-bottom: 20px;
+    }
+    .hook h1 em {
+      font-style: italic;
+      color: var(--mid);
+    }
+    .hook p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+      max-width: 460px;
+      margin-bottom: 36px;
+    }
+    .hook-btns {
+     display: flex;
+      gap: 16px;
+    }
+    .btn-primary {
+      background: var(--deep);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover { 
+      background: var(--mid); 
+      transform: translateY(-2px);
+     }
+
+    .btn-secondary {
+      border: 1.5px solid var(--mid);
+      color: var(--mid);
+      padding: 14px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover { 
+        background: var(--light); 
+    }
+
+    .hook-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .hook-card-stack { 
+        position: relative; 
+        width: 320px;
+         height: 340px;
+     }
+
+    .hcard {
+      position: absolute;
+      background: var(--white);
+      border: 1px solid var(--light);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 8px 30px rgba(59,30,84,0.08);
+      width: 260px;
+    }
+
+    .hcard:nth-child(1) {
+     top: 0; left: 40px;
+      transform: rotate(-4deg); 
+      background: var(--light);
+     }
+
+    .hcard:nth-child(2) {
+         top: 50px; left: 10px;
+          transform: rotate(2deg); 
+          z-index: 2; 
         }
-         /*___NAVBAR___*/
-        .navbar{
-            display: flex;
-            justify-content: space-between ;
-            align-items: center;
-            background-color: rgb(145, 105, 174);
-            color:antiquewhite;
-            padding: 15px 30px; 
-            position: sticky;
-            top: 0px;
-        
+
+    .hcard:nth-child(3) {
+         top: 120px; left: 50px; 
+         transform: rotate(-1deg); 
+         z-index: 3; 
+         background: var(--deep); 
+         color: var(--white); 
         }
-        .navLinks{
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            margin: 0;
+
+    .hcard .role {
+         font-family: 'Cormorant Garamond', serif; 
+         font-size: 1.1rem; font-weight: 600; 
+         margin-bottom: 6px;
+         }
+
+    .hcard .company { 
+        font-size: 12px; 
+        opacity: 0.7;
+     }
+
+    .hcard .salary { 
+        font-size: 13px;
+         font-weight: 500; 
+         margin-top: 10px; 
+         color: var(--mid);
+     }
+
+    .hcard:nth-child(3) .salary { 
+        color: var(--light);
+     }
+
+    /* FEATURES */
+    .features {
+      padding: 90px 60px;
+      background: var(--pale);
+    }
+    .section-label {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--deep);
+      margin-bottom: 50px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px 22px;
+      border: 1px solid var(--light);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feature-card:hover { 
+        box-shadow: 0 8px 24px rgba(59,30,84,0.1); 
+        transform: translateY(-4px); 
+    }
+    .feature-icon { 
+        font-size: 1.8rem;
+         margin-bottom: 14px; 
+    }
+    .feature-card h3 {
+         font-size: 0.95rem; 
+         font-weight: 600; 
+         margin-bottom: 8px; 
+         color: var(--deep);
+   }
+    .feature-card p { 
+        font-size: 13px; 
+        color: #777; 
+        line-height: 1.6; 
+    }
+
+    /* TOP JOBS */
+    .top-jobs {
+      padding: 90px 60px;
+      background: var(--white);
+    }
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .job-card {
+      border: 1px solid var(--light);
+      border-radius: 14px;
+      padding: 24px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      background: var(--white);
+    }
+    .job-card:hover { 
+        box-shadow: 0 8px 24px rgba(59,30,84,0.1);
+         transform: translateY(-3px);
+     }
+    .job-card h3 {
+         font-size: 1rem; font-weight: 600; 
+         margin-bottom: 6px; 
+         color: var(--deep); 
         }
-        .navLinks a{
-            color:antiquewhite;
-            text-decoration: none;
+    .job-card .meta { 
+        font-size: 13px;
+         color: #888; 
+         margin-bottom: 16px; 
+    }
+    .job-tag {
+      display: inline-block;
+      background: var(--light);
+      color: var(--deep);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-right: 6px;
+      margin-bottom: 14px;
+    }
+    .job-card a {
+      display: block;
+      text-align: center;
+      background: var(--deep);
+      color: var(--white);
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .job-card a:hover { background: var(--mid); }
+
+    /* FEEDBACKS */
+    .feedbacks {
+      padding: 90px 60px;
+      background: var(--deep);
+    }
+    .feedbacks .section-title {
+         color: var(--white); 
         }
-        .navLinks a:hover{
-            color:rgb(106, 57, 152);
-            text-decoration: underline;
+    .feedbacks .section-label {
+         color: var(--light);
         }
-        .logo{
-            font-weight: 800;
-            font-size: 20px;
-        }
-   
-       
-          
+    .feedbacks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .feedbackscard {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(212,190,228,0.2);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .feedbackscard p { 
+        font-size: 14px;
+         color: var(--light); 
+         line-height: 1.7;
+          margin-bottom: 16px; 
+          font-style: italic;
+     }
+    .feedbackscard strong { 
+        color: var(--white); font-size: 13px;
+     }
+
+    /* CTA */
+    .cta-section {
+      padding: 100px 60px;
+      text-align: center;
+      background: var(--light);
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--deep);
+      margin-bottom: 16px;
+    }
+    .cta-section p { font-size: 1rem; color: #555; margin-bottom: 32px; }
+    .cta-section a {
+      display: inline-block;
+      background: var(--deep);
+      color: var(--white);
+      padding: 15px 40px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .cta-section a:hover { background: var(--mid); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      font: 1em sans-serif;
+      text-align: center;
+      padding: 24px;
+      background: var(--deep);
+      color: var(--light);
+      font-size: 13px;
+    }
+  

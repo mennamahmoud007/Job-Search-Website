@@ -1,170 +1,150 @@
 <!DOCTYPE html>
-<html>
-<body>
-    <head> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Jobbiter</title>
     <link rel="stylesheet" href="../StyleSheet.css" >
-        <style>
-        #top-jobs {
-  padding: 60px 20px;
-  text-align: center;
-}
+    </head>
 
-#top-jobs h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
+<body>
+  <nav class="navbar">
+    <div class="logo"><span>JOB</span>BITER</div>
+    <ul class="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="guestBrowse.html">Browse Jobs</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
+    </ul>
+  </nav>
 
-.jobs-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 0 40px;
-}
-
-.job-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  text-align: left;
-}
-
-.job-card h3 {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-}
-
-.job-card p {
-  color: gray;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-.job-card button {
-  background-color: rgb(145, 105, 175);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.job-card button:hover {
-  background-color: rgb(126, 87, 159);
-}
-        </style>
-        </head>
-
-
-    <header>
-<nav class="navbar">
-  <div class="logo">LOGO</div>
-  <ul class="navLinks">
-          <li> <a href="home.html"> Home Page </a> </li>
-          <li><a href="guestBrowse.html"> Browse Jobs </a></li>
-          <li><a href="login.html"> Login </a></li>
-          <li><a href="signup.html"> Sign Up </a></li>
-       </ul>
- </nav>
-    </header>
-
-    <main> 
-
-        <section id="hook">
-         <h1 style="text-align: center; "> Stop Searching. Start Landing ! </h1>
-         <h3 style="text-align: center;"> Thousands of opportunities in one place , find the job that fits your skills, your goals, and your life. </h3>
-         <p  style="text-align: center;"> Finding a job these days can be tough, with JobBoard it's easier. 
-            Browse thousands of listings, match with employers who are looking for someone exactly like you, 
-            and take the next step in your career with confidence. Your dream job is just a search away. </p>
-        </section>
-
-        <section id="features">
-            <h2 style="text-align: center;"> Why JobBoard ? </h2>
-            <ul>
-                <li> Personalized Job Recommendations : We use advanced algorithms to match you with jobs that fit your skills, experience, and preferences. </li>
-                <li> User-Friendly Interface : Our platform is designed to be intuitive and easy to navigate, making your job search experience seamless. </li>
-                <li> Comprehensive Job Listings : We partner with top employers to bring you a wide range of job opportunities across various industries. </li>
-                <li> Career Resources : Access valuable resources such as resume tips, interview preparation guides, and career advice to help you succeed. </li>
-            </ul>
-        </section>
-
-        <section id="top-jobs">
-  <h2>Top Jobs</h2>
-
-  <div class="jobs-container">
-
-    <div class="job-card">
-      <h3>Software Engineer</h3>
-      <p>Google · Full-time · Remote</p>
-      <a href="signup.html"><button> Apply</button></a>
+  <section class="hook">
+    <div class="hook-text">
+      <span class="hook-badge">✦ Your career is our priority</span>
+      <h1>Stop Searching,<br><em>Start Landing!</em></h1>
+      <p>Thousands of curated opportunities in one place. Find the role that fits your skills, your goals, and your life.</p>
+      <div class="hook-btns">
+        <a href="guestBrowse.html" class="btn-primary">Browse Jobs</a>
+        <a href="home.html" class="btn-secondary">Learn More</a>
+      </div>
     </div>
-
-    <div class="job-card">
-      <h3>UI/UX Designer</h3>
-      <p>Apple · Full-time · New York</p>
-      <a href="signup.html"><button> Apply</button></a>
+    <div class="hook-visual">
+      <div class="hook-card-stack">
+        <div class="hcard">
+          <div class="role">UI/UX Designer</div>
+          <div class="company">Creative Studio · Alexandria</div>
+        </div>
+        <div class="hcard">
+          <div class="role">Data Analyst</div>
+          <div class="company">Insight Co · Remote</div>
+          <div class="salary">$1,800 / mo</div>
+        </div>
+        <div class="hcard">
+          <div class="role">Frontend Developer</div>
+          <div class="company">TechCorp · Cairo</div>
+          <div class="salary">$2,500 / mo</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="job-card">
-      <h3>Data Analyst</h3>
-      <p>Meta · Part-time · Remote</p>
-      <a href="signup.html"><button>Apply</button></a>
+  <section class="features">
+    <p class="section-label">Why Jobbiter ?</p>
+    <h2 class="section-title">Everything you need to land the role</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Smart Matching</h3>
+        <p>Algorithms that align your skills with the right opportunities.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Vast Listings</h3>
+        <p>Thousands of jobs across every industry, updated daily.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Track Applications</h3>
+        <p>Monitor every application from submission to offer.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Career Resources</h3>
+        <p>Resume tips, interview guides, and expert career advice.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="job-card">
-      <h3>Product Manager</h3>
-      <p>Amazon · Full-time · Seattle</p>
-      <a href="signup.html"><button> Apply</button></a>
+  <section class="top-jobs">
+    <p class="section-label">Featured Roles</p>
+    <h2 class="section-title">Top Jobs This Week</h2>
+    <div class="jobs-grid">
+      <div class="job-card">
+        <h3>Software Engineer</h3>
+        <p class="meta">Google · Remote</p>
+        <span class="job-tag">Full-time</span><span class="job-tag">Remote</span>
+        <a href="login.html">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>UI/UX Designer</h3>
+        <p class="meta">Apple · New York</p>
+        <span class="job-tag">Full-time</span><span class="job-tag">Onsite</span>
+        <a href="login.html">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Data Analyst</h3>
+        <p class="meta">Meta · Remote</p>
+        <span class="job-tag">Part-time</span><span class="job-tag">Remote</span>
+        <a href="login.html">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Product Manager</h3>
+        <p class="meta">Amazon · Seattle</p>
+        <span class="job-tag">Full-time</span><span class="job-tag">Onsite</span>
+        <a href="login.html">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Cybersecurity Analyst</h3>
+        <p class="meta">Microsoft · Remote</p>
+        <span class="job-tag">Full-time</span><span class="job-tag">Remote</span>
+        <a href="login.html">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Frontend Developer</h3>
+        <p class="meta">Netflix · Los Angeles</p>
+        <span class="job-tag">Full-time</span><span class="job-tag">Hybrid</span>
+        <a href="login.html">Apply Now</a>
+      </div>
     </div>
+  </section>
 
-    <div class="job-card">
-      <h3>Cybersecurity Analyst</h3>
-      <p>Microsoft · Full-time · Remote</p>
-      <a href="signup.html"><button>Apply</button></a>
+  <section class="feedbacks">
+  <p class="section-label">What They Say</p>
+  <h2 class="section-title">Our Users Love Us</h2>
+  <div class="feedbacks-grid">
+    <div class="feedbackscard">
+      <p>"Jobbiter made my job search so much easier. I found my dream job within weeks of signing up."</p>
+      <strong>— Sarah M.</strong>
     </div>
-
-    <div class="job-card">
-      <h3>Frontend Developer</h3>
-      <p>Netflix · Full-time · Los Angeles</p>
-      <a href="signup.html"><button> Apply</button></a>
+    <div class="feedbackscard">
+      <p>"The personalized recommendations were spot on. I highly recommend it to anyone looking."</p>
+      <strong>— John D.</strong>
     </div>
-    
-
+    <div class="feedbackscard">
+      <p>"The career resources helped me prepare for interviews and land my current job. So grateful!"</p>
+      <strong>— Emily R.</strong>
+    </div>
   </div>
 </section>
 
-        <section id="FeedBacks">
-            <h2 style="text-align: center;"> What Our Users Say </h2>
-            <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                <div style="width: 30%; background-color: #f0f0f0; padding: 20px; border-radius: 5px;">
-                    <p>"JobBoard made my job search so much easier! I found my dream job within weeks of signing up."</p>
-                    <p><strong>- Sarah M.</strong></p>
-                </div>
-                <div style="width: 30%; background-color: #f0f0f0; padding: 20px; border-radius: 5px;">
-                    <p>"The personalized job recommendations were spot on. I highly recommend JobBoard to anyone looking for a new opportunity."</p>
-                    <p><strong>- John D.</strong></p>
-                </div>
-                <div style="width: 30%; background-color: #f0f0f0; padding: 20px; border-radius: 5px;">
-                    <p>"The career resources provided by JobBoard helped me prepare for interviews and land my current job. I'm so grateful!"</p>
-                    <p><strong>- Emily R.</strong></p>
-                </div>
-            </div>
-        </section>
+  <section class="cta-section">
+    <h2>Ready for Your Dream Job?</h2>
+    <p>Join thousands of professionals who found their path with Jobbiter.</p>
+    <a href="signup.html">Sign Up Now</a>
+  </section>
 
-         <section id="call-to-action">
-            <h2 style="text-align: center;"> Ready to Find Your Dream Job ? </h2>
-            <p style="text-align: center;"> Join JobBoard today and take the first step towards your future. Sign up now to start exploring thousands of job opportunities and connect with employers who are looking for someone just like you. Your dream job is waiting for you on JobBoard. </p>
-            <div style="text-align: center;">
-                <a href="signup.html" style="padding: 10px 20px; background-color: rgb(145, 105, 175); color: white; text-decoration: none; border-radius: 5px;"> Sign Up Now </a>
-            </div>
-        </section>
-
-    </main>
-
-     <footer = "footer" style="text-align: center; padding: 20px; background-color: #f0f0f0; margin-top: 20px;">
-    <p>© 2026 JobBoard</p>
+  <footer>
+    <p>© 2026 Jobbiter Jobs </p>
   </footer>
 
 </body>
