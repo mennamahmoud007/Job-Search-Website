@@ -29,9 +29,32 @@
             padding-top: 10px;
             padding-bottom: 10px;
             font-size: 16px;
+            margin-top: 10px;
             cursor: pointer;
             display: block;
         }
+        .borders1{
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(235, 237, 240);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            width:60%;
+            display: inline-block;
+        }
+        .borders2{
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(235, 237, 240);
+            margin-bottom: 20px;
+            border-radius: 20px;
+            padding: 20px;
+            width:30%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        
 
     </style>
     
@@ -46,14 +69,20 @@
         </ul> 
     </nav>
     <main>
-    <section>
+    <section class="borders1">
         <h1 >Job Title</h1> 
         <p><span>full-time</span>   <span> remote</span></p>
         <P>Job category</P>
     </section>
 
+    <div class="borders2">
+        <button class="button">Apply Now</button> 
+        <button class="button">Save Job</button> <br>
+        <button class="share">Share </button>
+        </div>
+
     <section>
-    <div>
+    <div class="borders1">
         <h3> job details</h3>
         <ul>
             <li>job status</li>
@@ -61,7 +90,19 @@
             <li>Salary</li>
         </ul>
     </div>
-    <div>
+
+    <div class="borders2">
+
+        <h3>Similar Jobs</h3>
+        <ul>
+            <li><a href="#">Similar Job 1</a></li>
+            <li><a href="#">Similar Job 2</a></li>
+            <li><a href="#">Similar Job 3</a></li>
+        </ul>
+        </div>
+
+
+    <div class="borders1">
         <h3> job Requirements</h3>
         <ul>
             <li>Education</li>
@@ -71,7 +112,8 @@
             <li> soft skills</li>
         </ul>
     </div>
-    <div>
+
+    <div class="borders1">
         <h3> job Benefits</h3>
         <ul>
             <li>Health Insurance</li>
@@ -80,33 +122,16 @@
             <li>Professional Development</li>
         </ul>
     </div>
-    </section>
     
+    <div class="borders1">
 
-    <aside>
-        <div>
-        <button class="button">Apply Now</button> 
-        <button class="button">Save Job</button> <br>
-        <button class="share">Share </button>
-        </div>
-        <div>
-
-        <h3>Company Information</h3>
+    <h3>Company Information</h3>
         <p>Company Name</p>
         <p>Industry</p>
         <p>Company Size</p>
         <p>Company Location</p>
         </div>
-        <div>
-
-        <h3>Similar Jobs</h3>
-        <ul>
-            <li><a href="#">Similar Job 1</a></li>
-            <li><a href="#">Similar Job 2</a></li>
-            <li><a href="#">Similar Job 3</a></li>
-        </ul>
-        </div>
-    </aside>
+    </section>
     </main>
 
     
