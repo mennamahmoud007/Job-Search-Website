@@ -1,3 +1,6 @@
+// ============================================
+//              Sign-up Page
+// ============================================
 const form = document.getElementById("signupForm");
 const companyRadio = document.getElementById("company_radio");
 const userRadio = document.getElementById("user_radio");

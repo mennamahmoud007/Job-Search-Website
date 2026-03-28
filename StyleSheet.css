@@ -13,7 +13,7 @@
       color: var(--deep);
       overflow-x: hidden;
       margin: 0 ;
-       padding: 0;
+      padding: 0;
     }
 
     /* Navigation bar */
@@ -26,7 +26,7 @@
       border-bottom: 1px solid var(--light);
       position: sticky;
       top: 0;
-       z-index: 100;
+      z-index: 100;
     }
 
     /* Logo */
