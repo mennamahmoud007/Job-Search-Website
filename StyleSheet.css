@@ -538,9 +538,6 @@ footer {
   margin-top: 20px;
 }
 
-.Sign-Up {
-  font-family: sans-serif;
-}
 
 .Sign-Up form {
   background-color: #F3E8FF;
@@ -607,9 +604,6 @@ footer {
   display: none;
 }
 
-.add-job {
-  font-family: sans-serif;
-}
 
 .add-job #myH,
 .add-job #myP {
