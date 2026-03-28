@@ -474,11 +474,7 @@
             justify-content: space-between;
             flex:3;
             margin-top: 20px;  
-        }
-
-      .Sign-Up {
-            background-color: #EDE9FE; 
-        }    
+        }  
 
    .Sign-Up form {
             background-color: #F3E8FF;
