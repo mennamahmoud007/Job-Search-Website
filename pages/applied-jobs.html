@@ -7,7 +7,7 @@
 <body>
 
  <nav class="navbar">
-        <div class="logo">LOGO</div>
+        <div class="logo"><span>JOB</span>BITER</div>
         <ul class="navLinks"> 
             <li> <a href="browse.html">Browse Jobs</a> </li>
             <li> <a href="applied-jobs.html">My applied jobs</a></li>
@@ -16,40 +16,44 @@
 </nav>
 
 <br>
+<div class="container">
 
-<h1 align="center">My Applications</h1>
-
-<p align="center" style="font-size: 18px; color: rgb(46, 4, 87);">
-Track the status of the jobs you applied for and monitor your progress
-</p>
-
+    <h1 id="head"> My Journey</h1>
+    
+    <p  id="desc">Easily track your job applications, monitor their status, and stay on top of your career progress across multiple opportunities.</p>
+</div>
 
 <br>
+<div class="stats">
 
+    <div class="stat-card">
+        <p>Total Applied</p>
+        <h2>5</h2>
+    </div>
 
-<table border="1" width="40%" align="center" cellpadding="10">
+    <div class="stat-card">
+        <p>Under Review</p>
+        <h2>2</h2>
+    </div>
 
-    <tr align="center" style="background-color: rgb(203, 206, 209);">
-        <th>Total Applications</th>
-        <th>Under Review</th>
-        <th>Accepted</th>
-        <th>Rejected</th>
-    </tr>
+    <div class="stat-card response">
+        <p>Response Rate</p>
+        <h2>85%</h2>
+    </div>
 
-    <tr align="center">
-        <td>3</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-    </tr>
+    <div class="stat-card highlight">
+        <p>New Offers</p>
+        <h2>1</h2>
+    </div>
 
-</table>
+</div>
+
 
 
 <br><br>
 
 
-<table border="1" width="80%" align="center" cellpadding="10">
+<table class="jobs-table">
 
     <thead>
         <tr>
@@ -57,7 +61,7 @@ Track the status of the jobs you applied for and monitor your progress
             <th>Company</th>
             <th>Location</th>
             <th>Applied Date</th>
-            <th>Status</th>
+            <th>Status Badge</th>
             <th>Details</th>
         </tr>
     </thead>
@@ -65,29 +69,55 @@ Track the status of the jobs you applied for and monitor your progress
 
     <tbody>
 
-        <tr style="background-color: rgb(248,217,160);">
-            <td>Frontend Developer</td>
+        <tr >
+            <td>Frontend Developer
+                <p class=" schedule">Full-time</p>
+            </td>
             <td>TechCorp</td>
             <td>Cairo</td>
             <td>May 10</td>
-            <td align="center"><b>Under Review</b></td>
-            <td align="center"><a href="../pages/job-details.html">View Job</a></td>
+            <td><span class="badge review">Under Review</span></td>
+            <td ><a href="../pages/job-details.html">View Job</a></td>
         </tr>
-        <tr style="background-color: rgb(193,244,193);">
-            <td>Data Analyst</td>
+        <tr>
+            <td>Data Analyst
+                <p class=" schedule">Part-time</p>
+            </td>
             <td>Insight Co</td>
             <td>Remote</td>
             <td>May 12</td>
-            <td align="center"><b>Accepted</b></td>
-        <td align="center"><a href="../pages/job-details.html">View Job</a></td>
+            <td ><span class="badge accepted">Accepted</span></td>
+        <td ><a href="../pages/job-details.html">View Job</a></td>
         </tr>
-        <tr style="background-color: rgb(237,172,172);">
-            <td>Backend Developer</td>
+        <tr >
+            <td>Backend Developer
+                <p class=" schedule">Full-time</p>
+            </td>
             <td>NexaSoft</td>
             <td>Cairo</td>
             <td>May 15</td>
-            <td align="center"><b>Rejected</b></td>
-            <td align="center"><a href="../pages/job-details.html">View Job</a></td>
+            <td><span class="badge rejected">Rejected</span></td>
+            <td ><a href="../pages/job-details.html">View Job</a></td>
+        </tr>
+         <tr >
+            <td>UI/UX Designer
+                <p class=" schedule">Full-time</p>
+            </td>
+            <td>Creative Studio</td>
+            <td>Alexandria</td>
+            <td>May 20</td>
+            <td><span class="badge rejected">Rejected</span></td>
+            <td ><a href="../pages/job-details.html">View Job</a></td>
+        </tr>
+         <tr >
+            <td>DevOps Engineer
+                <p class=" schedule">Full-time</p>
+            </td>
+            <td>CloudBase</td>
+            <td>Remote</td>
+            <td>May 30</td>
+            <td><span class="badge review">Under Review</span></td>
+            <td ><a href="../pages/job-details.html">View Job</a></td>
         </tr>
 
     </tbody>
