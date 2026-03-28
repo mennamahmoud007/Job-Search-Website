@@ -475,4 +475,78 @@
             flex:3;
             margin-top: 20px;  
         }
+
+      .Sign-Up {
+            background-color: #EDE9FE; 
+        }    
+
+   .Sign-Up form {
+            background-color: #F3E8FF;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .Sign-Up .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .Sign-Up input {
+            width:100%;
+            padding: 12px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #C4B5FD;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .Sign-Up input:focus {
+            outline: none;
+            border-color: #7C3AED;
+            box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+        }
+
+        .Sign-Up .form-title {
+            margin-top: 40px;
+            text-align: center;
+        }
+       
+
+        .Sign-Up label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-align: center;
+            display: block;
+        }
+
+        .Sign-Up button {
+            margin: auto;
+            background-color: rgb(145, 105, 174);
+            color: white;
+            display: block;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .Sign-Up button:hover {
+            background-color: rgb(106, 57, 152);
+        }
+
+        .Sign-Up .company_name_field {
+            display: none;
+        }
+
+       
+   
+       
+                 
                  
