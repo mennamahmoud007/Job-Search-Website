@@ -541,6 +541,77 @@
             display: none;
         }
 
+          .add-job #myH , .add-job #myP {
+           text-align: center;
+        }
+
+        .add-job #myH {
+           margin-top: 30px;
+        }
+
+        .add-job #myP {
+           margin-bottom: 20px;
+           color: #555;
+        }
+
+        .add-job form {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #F3E8FF;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+        .add-job fieldset {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #faf7ff;
+        border: 1px solid #C4B5FD;
+        }
+
+        .add-job legend {
+        font-weight: bold;
+        }
+
+        .add-job label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .add-job input, .add-job select ,.add-job textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #C4B5FD;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .add-job input:focus, .add-job select:focus ,.add-job textarea:focus {
+            outline: none;
+            border-color: rgb(145, 105, 174);
+            box-shadow: 0 0 5px rgba(145, 105, 174, 0.5);
+        }
+
+        .add-job button {
+        background-color: rgb(145, 105, 174);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .add-job button:hover {
+        background-color: rgb(106, 57, 152);
+        }
+
        
    
        

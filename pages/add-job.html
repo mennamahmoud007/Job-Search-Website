@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Job</title>
     <link rel="stylesheet" href="../StyleSheet.css" >
+
 </head>
-<body>
+<body class="add-job">
     <nav class="navbar">
-        <div class="logo">LOGO</div>
+        <div class="logo"><span>JOB</span>BITER</div>
         <ul class="navLinks">
             <li><a href="dashboard.html"> My Jobs </a></li>
             <li><a href="add-job.html"> Post a Job </a></li>
             <li><a href="home.html"> Logout </a></li>
         </ul>
     </nav>
-    <h1> Add / Edit a Job </h1>
-    <p> Company admins can use this form to add a new job or edit an existing one. </p>
+    <h1 id="myH"> Add / Edit a Job </h1>
+    <p id="myP"> Company admins can use this form to add a new job or edit an existing one. </p>
 
     
     <!-- When the admin clicks "Add Job", the form submits the job data
@@ -125,7 +126,7 @@
 
         <fieldset>
         <legend> Admin Information </legend>
-        <label for="creator"> Created By Logged-in Admin</label>
+        <label for="creator"> Created By Admin: </label>
         <input type="text" id="creator" name="creator" placeholder="Enter Admin Name" required> <br><br>
 
         </fieldset>
