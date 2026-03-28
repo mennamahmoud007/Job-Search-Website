@@ -1,230 +1,309 @@
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="../StyleSheet.css" >
+    <link rel="stylesheet" href="../StyleSheet.css">
 </head>
-
-<body>
+ 
+<body class="dashboard-body">
+ 
     <nav class="navbar">
-        <div class="logo">LOGO</div>
+        <div class="logo"><span>JOB</span>BITER</div>
         <ul class="navLinks">
-            <li><a href="dashboard.html"> My Jobs </a></li>
-            <li><a href="add-job.html"> Post a Job </a></li>
-            <li><a href="home.html"> Logout </a></li>
+            <li><a href="dashboard.html">My Jobs</a></li>
+            <li><a href="add-job.html">Post a Job</a></li>
+            <li><a href="home.html">Logout</a></li>
         </ul>
     </nav>
-
-    <table width="80%" align="center" cellpadding="20" border="1">
-        <tr>
-            <td width="70%">
-                <h2 align="center">Company Name's Dashboard</h2>
-                <p align="center">Manage your jobs: edit, delete, or add new positions</p>
-            </td>
-        </tr>
-    </table>
-
-    <br><br><br><br>
-
-
-    <table width="80%" align="center" border="1" cellpadding="20"> >
-        <tr align="center">
-            <td width="25%" border="1">
-                <h3>TOTAL JOBS</h3>
-                <p><b>8</b></p>
-            </td>
-            <td width="25%" border="1">
-                <h3>OPEN JOBS</h3>
-                <p>
-                    <b>5</b>
-                </p>
-            </td>
-            <td width="25%" border="1">
-                <h3>TOTAL APPLICATIONS</h3>
-                <p><b>24</b></p>
-            </td>
-            <td width="25%" border="1">
-                <h3>PENDING REVIEW</h3>
-                <p>
-                    <b>12</b>
-                </p>
-            </td>
-        </tr>
-    </table>
-
-    <br><br><br><br>
-
-    <h2 align="center">Your Jobs</h2>
-    <br>
-
-    <table width="90%" align="center" border="1" cellpadding="12">
-
-        <tr bgcolor="#9169AE">
-            <th>Job Title</th>
-            <th>Company</th>
-            <th>Location</th>
-            <th>Schedule</th>
-            <th>Salary</th>
-            <th>Experience</th>
-            <th>Applications</th>
-            <th>Status</th>
-            <th>Actions</th>
-        </tr>
-        <tr>
-            <td><b>Frontend Developer</b></td>
-            <td>Tech Corp</td>
-            <td>Cairo, Egypt</td>
-            <td>Full-time | Onsite</td>
-            <td align="center"><b>$2,500K</b></td>
-            <td align="center">2+ years</td>
-            <td align="center">8</td>
-            <td align="center">
-                <b>Open</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-        <tr>
-            <td><b>Data Analyst</b></td>
-            <td>Insight Co</td>
-            <td>Remote</td>
-            <td>Part-time | Remote</td>
-            <td align="center"><b>$1,800K</b></td>
-            <td align="center">0-1 years</td>
-            <td align="center">12</td>
-            <td align="center">
-                <b>Open</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td><b>UI/UX Designer</b></td>
-            <td>Creative Studio</td>
-            <td>Alexandria, Egypt</td>
-            <td>Full-time | Onsite</td>
-            <td align="center"><b>$2,000K</b></td>
-            <td align="center">2+ years</td>
-            <td align="center">4</td>
-            <td align="center">
-                <b>Closed</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td><b>Frontend Developer</b></td>
-            <td>Tech Corp</td>
-            <td>Cairo, Egypt</td>
-            <td>Full-time | Onsite</td>
-            <td align="center"><b>$2,500K</b></td>
-            <td align="center">2+ years</td>
-            <td align="center">8</td>
-            <td align="center">
-                <b>Open</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td><b>Data Analyst</b></td>
-            <td>Insight Co</td>
-            <td>Remote</td>
-            <td>Part-time | Remote</td>
-            <td align="center"><b>$1,800K</b></td>
-            <td align="center">0-1 years</td>
-            <td align="center">6</td>
-            <td align="center">
-                <b>Closed</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td><b>Backend Developer</b></td>
-            <td>NexaSoft</td>
-            <td>Cairo, Egypt</td>
-            <td>Full-time | Onsite</td>
-            <td align="center"><b>$3,000K</b></td>
-            <td align="center">3+ years</td>
-            <td align="center">5</td>
-            <td align="center">
-                <b>Open</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td><b>DevOps Engineer</b></td>
-            <td>CloudBase</td>
-            <td>Remote</td>
-            <td>Full-time | Remote</td>
-            <td align="center"><b>$3,500K</b></td>
-            <td align="center"> 4+ years</td>
-            <td align="center">10</td>
-            <td align="center">
-                <b>Open</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-
-        <tr>
-
-            <td><b>Mobile App Developer</b></td>
-            <td>AppWorks</td>
-            <td>Alexandria, Egypt</td>
-            <td>Full-time | Onsite</td>
-            <td align="center"><b>$2,200K</b></td>
-            <td align="center">1-3 years</td>
-            <td align="center">3</td>
-            <td align="center">
-                <b>Closed</b>
-            </td>
-            <td align="center">
-                <a href="edit-job.html">Edit</a> |
-                <a href="#">Delete</a>
-            </td>
-        </tr>
-    </table>
-
-    <br><br>
-
-
-    <table width="90%" align="center">
-        <tr>
-            <td align="center">
-                <a href="add-job.html"><button><b>+ Add New Job</b></button></a>
-            </td>
-        </tr>
-    </table>
-
-    <br><br>
-
+ 
     
-</body>
+    <div class="dashboard-header">
+        <h1 id="h1-dashboard">Company Name's Dashboard</h1>
+        <p>Manage your jobs: edit, delete, or add new positions</p>
+    </div>
+ 
+    <br><br><br><br>
+ 
+<div class="stats-bar">
+    <div class="stat-card">
+        <h3>TOTAL JOBS</h3>
+        <p>8</p>
+    </div>
+    <div class="stat-card">
+        <h3>OPEN JOBS</h3>
+        <p>5</p>
+    </div>
+    <div class="stat-card">
+        <h3>TOTAL APPLICATIONS</h3>
+        <p>24</p>
+    </div>
+    <div class="stat-card">
+        <h3>PENDING REVIEW</h3>
+        <p>12</p>
+    </div>
+</div>
+ 
+    <br><br><br><br>
+ 
+    <div class="jobs-section">
+        <h2>Your Jobs</h2>
+        <br>
+ 
+        <div class="jobs-grid">
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">Frontend Developer</p>
+                    
+                </div>
+                <p class="card-company">Tech Corp &mdash; Cairo, Egypt</p>
+                <div class="card-details">
+                    <span class="detail-chip">Full-time | Onsite</span>
+                    <span class="detail-chip">$2,500K</span>
+                    <span class="detail-chip">2+ years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">8</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value open-color">Open</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
 
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">Data Analyst</p>
+                    
+                </div>
+                <p class="card-company">Insight Co &mdash; Remote</p>
+                <div class="card-details">
+                    <span class="detail-chip">Part-time | Remote</span>
+                    <span class="detail-chip">$1,800K</span>
+                    <span class="detail-chip">0-1 years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value open-color">Open</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">UI/UX Designer</p>
+                    
+                </div>
+                <p class="card-company">Creative Studio &mdash; Alexandria, Egypt</p>
+                <div class="card-details">
+                    <span class="detail-chip">Full-time | Onsite</span>
+                    <span class="detail-chip">$2,000K</span>
+                    <span class="detail-chip">2+ years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value closed-color">Closed</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">Frontend Developer</p>
+                    
+                </div>
+                <p class="card-company">Tech Corp &mdash; Cairo, Egypt</p>
+                <div class="card-details">
+                    <span class="detail-chip">Full-time | Onsite</span>
+                    <span class="detail-chip">$2,500K</span>
+                    <span class="detail-chip">2+ years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">8</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value open-color">Open</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">Data Analyst</p>
+                    
+                </div>
+                <p class="card-company">Insight Co &mdash; Remote</p>
+                <div class="card-details">
+                    <span class="detail-chip">Part-time | Remote</span>
+                    <span class="detail-chip">$1,800K</span>
+                    <span class="detail-chip">0-1 years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">6</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value closed-color">Closed</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">Backend Developer</p>
+                    
+                </div>
+                <p class="card-company">NexaSoft &mdash; Cairo, Egypt</p>
+                <div class="card-details">
+                    <span class="detail-chip">Full-time | Onsite</span>
+                    <span class="detail-chip">$3,000K</span>
+                    <span class="detail-chip">3+ years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value open-color">Open</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">DevOps Engineer</p>
+                    
+                </div>
+                <p class="card-company">CloudBase &mdash; Remote</p>
+                <div class="card-details">
+                    <span class="detail-chip">Full-time | Remote</span>
+                    <span class="detail-chip">$3,500K</span>
+                    <span class="detail-chip">4+ years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value open-color">Open</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+ 
+
+            <div class="job-card">
+                <div class="card-header">
+                    <p class="card-title">Mobile App Developer</p>
+                    
+                </div>
+                <p class="card-company">AppWorks &mdash; Alexandria, Egypt</p>
+                <div class="card-details">
+                    <span class="detail-chip">Full-time | Onsite</span>
+                    <span class="detail-chip">$2,200K</span>
+                    <span class="detail-chip">1-3 years</span>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Applications</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value closed-color">Closed</span>
+                        <span class="stat-label">Status</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="card-actions">
+                        <a href="add-job.html">Edit</a>
+                        <a href="#" class="delete-link">Delete</a>
+                    </div>
+                    <a href="job-details.html" class="btn-view">View Job Details</a>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+ 
+    <br><br>
+ 
+    <div class="add-job-row">
+        <a href="add-job.html"><button><b>+ Add New Job</b></button></a>
+    </div>
+ 
+    <br><br>
+
+</body>
 </html>
