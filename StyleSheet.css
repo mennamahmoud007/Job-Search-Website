@@ -475,6 +475,9 @@
             flex:3;
             margin-top: 20px;  
         }  
+   .Sign-Up {
+            font-family: sans-serif;
+        }     
 
    .Sign-Up form {
             background-color: #F3E8FF;
@@ -540,6 +543,10 @@
         .Sign-Up .company_name_field {
             display: none;
         }
+
+        .add-job {
+            font-family: sans-serif;
+        }  
 
           .add-job #myH , .add-job #myP {
            text-align: center;
