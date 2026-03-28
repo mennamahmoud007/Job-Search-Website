@@ -1,8 +1,11 @@
-const form = document.getElementById("signupForm");
-const companyRadio = document.getElementById("company_radio");
-const userRadio = document.getElementById("user_radio");
-const companyField = document.querySelector(".company_name_field");
-const companyInput = document.getElementById("company_name");
+const signupForm = document.getElementById("signupForm");
+
+if(signupForm) {
+
+    const companyRadio = document.getElementById("company_radio");
+    const userRadio = document.getElementById("user_radio");
+    const companyField = document.querySelector(".company_name_field");
+    const companyInput = document.getElementById("company_name");
 
     companyRadio.addEventListener("change", () => {
         companyField.style.display = "block";
