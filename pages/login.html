@@ -4,42 +4,37 @@
 <head>
     <meta charset="UTF-8/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Log in form </title>
-    <link rel="stylesheet" href="../StyleSheet.css" >
+    <title> Log In - Jobbiter</title>
+    <link rel="stylesheet" href="../StyleSheet.css">
 </head>
 
-<body>
+<body class="LogIn">
     <nav class="navbar">
-  <div class="logo">LOGO</div>
-  <ul class="navLinks">
-          <li> <a href="home.html"> Home Page </a> </li>
-          <li><a href="guestBrowse.html"> Browse Jobs </a></li>
-          <li><a href="login.html"> Login </a></li>
-          <li><a href="signup.html"> Sign Up </a></li>
-       </ul>
- </nav>
-    <br><br><br><br><br><br><br>
-    <table width="30%" align="center" border="1" cellpadding="50">
-        <tr align="center">
-            <td>
-                <h2>Fill the form! </h2>
-                <br>
-
-                <form>
-                    <label for="username"><b>Username:</b></label>
-                    <input type="text" id="username" name="username" placeholder="Username or email" required> <br><br>
-                    <label for="password"> <b>Password:</b></label>
-                    <input type="password" id="password" name="password" placeholder="Password"> <br><br>
-                    <br>
-                    <input type="submit" value="Log in">
-                    <br>
-                    <p>Don't have an account?
-                        <a href="signup.html">Sign up</a>
-                    </p>
-                </form>
-        </tr>
-        </div>
-        
+        <div class="logo"><span>JOB</span>BITER</div>
+        <ul class="navLinks">
+            <li> <a href="home.html"> Home Page </a> </li>
+            <li><a href="guestBrowse.html"> Browse Jobs </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="signup.html"> Sign Up </a></li>
+        </ul>
+    </nav>
+    
+    <h2 class="form-title">Log into your account </h2>
+    <div class="login-container">    
+        <form method="POST" action="#">
+            <label id = "username-label" for="username"><b>Username:</b></label> <br>
+            <input type="text" id="username" name="username" placeholder="Username or email" required> <br><br>
+            <label id="password-label" for="password"> <b>Password:</b></label><br>
+            <input type="password" id="password" name="password" placeholder="Password"> <br><br>
+            <br>
+            <input type="submit" value="Log in">
+            <br>
+    
+        </form>
+    </div>
+    <p id="signup-link">Don't have an account?
+        <a href="signup.html">Sign up</a>
+    </p>
     
 </body>
 
