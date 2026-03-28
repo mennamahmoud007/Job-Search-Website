@@ -410,4 +410,69 @@
       color: var(--light);
       font-size: 13px;
     }
-  
+  /* job details page */
+  .apply-job-btn{
+                border-radius: 40px;
+                padding: 14px 25px;
+                margin-bottom: 10 px;
+
+              }
+    .share-btn{
+            background-color:transparent;
+            color: white;
+            border:none;
+            padding: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            display: block;
+             margin-left: auto;
+             margin-right: auto;
+             transition: filter 0.2s;
+            
+        }
+        .share-icon {
+            width: 30px;
+            height: 30px;
+
+        }
+        .share-btn:hover .share-icon {
+            filter: brightness(0.8);
+        }
+        .job-details-page{
+           display: flex;
+            justify-content: space-between;
+            margin-right: 110px;
+            margin-left: 110px;
+        }
+        #job-details-sidebar{
+           display: flex;
+            flex-direction: column;
+            justify-content: start;
+            flex:1;
+            margin-top: 20px;
+        }
+        .job-details-sidebar-containers{
+            padding: 20px;
+            border: 1.5px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+
+        }
+        .job-details-main-containers{
+            padding: 20px;
+            border: 1.5px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .job-details-main-container{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex:3;
+            margin-top: 20px;  
+        }
+                 

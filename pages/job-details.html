@@ -5,135 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Details</title>
     <link rel="stylesheet" href="../StyleSheet.css" >
-    <style>
-        .button{
-             background-color: rgb(145, 105, 174);
-                color: white;
-                border: none;
-                border-radius: 16px;
-                padding-right: 15px;
-                padding-left: 15px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                font-size: 16px;
-                cursor: pointer;
-                margin-bottom: 10 px;
-        }
-        .share{
-            background-color: rgb(235, 237, 240);
-            color:rgb(77, 97, 130);
-            border: none;
-            border-radius: 16px;
-            padding-right: 15px;
-            padding-left: 15px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 16px;
-            margin-top: 10px;
-            cursor: pointer;
-            display: block;
-        }
-        .borders1{
-            border-style: solid;
-            border-width: 1px;
-            border-color: rgb(235, 237, 240);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            width:60%;
-            display: inline-block;
-        }
-        .borders2{
-            border-style: solid;
-            border-width: 1px;
-            border-color: rgb(235, 237, 240);
-            margin-bottom: 20px;
-            border-radius: 20px;
-            padding: 20px;
-            width:30%;
-            display: inline-block;
-            vertical-align: top;
-        }
-        
-
-    </style>
-    
 </head>
 <body>
      <nav class="navbar">
-        <div class="logo">LOGO</div>
+        <div class="logo"><span>JOB</span>BITER</div>
         <ul class="navLinks"> 
             <li> <a href="browse.html">Browse Jobs</a> </li>
             <li> <a href="applied-jobs.html">My applied jobs</a></li>
             <li> <a href="home.html">Logout</a></li>
         </ul> 
     </nav>
-    <main>
-    <section class="borders1">
-        <h1 >Job Title</h1> 
-        <p><span>full-time</span>   <span> remote</span></p>
-        <P>Job category</P>
-    </section>
-
-    <div class="borders2">
-        <button class="button">Apply Now</button> 
-        <button class="button">Save Job</button> <br>
-        <button class="share">Share </button>
-        </div>
-
-    <section>
-    <div class="borders1">
-        <h3> job details</h3>
-        <ul>
-            <li>job status</li>
-            <li> job description</li>
-            <li>Salary</li>
-        </ul>
+    <main class="job-details-page">
+  <section class="job-details-main-container">
+    <div class="job-details-main-containers">
+      <h1>Job Title</h1>
+      <p><span>Full-time</span> <span>Remote</span></p>
+      <p>Job Category</p>
     </div>
 
-    <div class="borders2">
-
-        <h3>Similar Jobs</h3>
-        <ul>
-            <li><a href="#">Similar Job 1</a></li>
-            <li><a href="#">Similar Job 2</a></li>
-            <li><a href="#">Similar Job 3</a></li>
-        </ul>
-        </div>
-
-
-    <div class="borders1">
-        <h3> job Requirements</h3>
-        <ul>
-            <li>Education</li>
-            <li>Experience</li>
-            <li> gender preference</li>
-            <li>tech skills</li>
-            <li> soft skills</li>
-        </ul>
+    <div class="job-details-main-containers">
+      <h3>Job Details</h3>
+      <ul>
+        <li>Job Status</li>
+        <li>Job Description</li>
+        <li>Salary</li>
+      </ul>
     </div>
 
-    <div class="borders1">
-        <h3> job Benefits</h3>
-        <ul>
-            <li>Health Insurance</li>
-            <li>Retirement Plan</li>
-            <li>Flexible Working Hours</li>
-            <li>Professional Development</li>
-        </ul>
+    <div class="job-details-main-containers">
+      <h3>Job Requirements</h3>
+      <ul>
+        <li>Education</li>
+        <li>Experience</li>
+        <li>Gender Preference</li>
+        <li>Tech Skills</li>
+        <li>Soft Skills</li>
+      </ul>
     </div>
-    
-    <div class="borders1">
 
-    <h3>Company Information</h3>
-        <p>Company Name</p>
-        <p>Industry</p>
-        <p>Company Size</p>
-        <p>Company Location</p>
-        </div>
-    </section>
-    </main>
+    <div class="job-details-main-containers">
+      <h3>Job Benefits</h3>
+      <ul>
+        <li>Health Insurance</li>
+        <li>Retirement Plan</li>
+        <li>Flexible Working Hours</li>
+        <li>Professional Development</li>
+      </ul>
+    </div>
 
-    
+    <div class="job-details-main-containers">
+      <h3>Company Information</h3>
+      <p>Company Name</p>
+      <p>Industry</p>
+      <p>Company Size</p>
+      <p>Company Location</p>
+    </div>
+  </section>
+
+  <aside id="job-details-sidebar">
+    <div class="job-details-sidebar-containers" ">
+      <button class="btn-primary apply-job-btn">Apply Now</button>
+      <button class="btn-primary apply-job-btn">Save Job</button>
+      <button class="share-btn"><img src="share-icon2.png" alt="Share" class="share-icon"></button>
+    </div>
+
+    <div class="job-details-sidebar-containers">
+      <h3>Similar Jobs</h3>
+      <ul>
+        <li><a href="#">Similar Job 1</a></li>
+        <li><a href="#">Similar Job 2</a></li>
+        <li><a href="#">Similar Job 3</a></li>
+      </ul>
+    </div>
+  </aside>
+</main> 
 </body>
 </html>
