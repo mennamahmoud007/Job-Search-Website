@@ -3,6 +3,7 @@
   --deep: #3B1E54;
   --mid: #9B7EBD;
   --light: #D4BEE4;
+  --verylight: #EADCF5;
   --pale: #EEEEEE;
   --white: #ffffff;
 }
@@ -540,7 +541,7 @@ footer {
 
 
 .Sign-Up form {
-  background-color: #F3E8FF;
+  background-color: var(--verylight);
   padding: 30px;
   border-radius: 10px;
   width: 400px;
@@ -559,7 +560,7 @@ footer {
   padding: 12px;
   margin-top: 6px;
   margin-bottom: 15px;
-  border: 1px solid #C4B5FD;
+  border: 1px solid var(--mid);
   border-radius: 8px;
   font-size: 14px;
   box-sizing: border-box;
@@ -567,8 +568,8 @@ footer {
 
 .Sign-Up input:focus {
   outline: none;
-  border-color: #7C3AED;
-  box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+  border-color: var(--deep);
+  box-shadow: 0 0 5px var(--mid);
 }
 
 .Sign-Up .form-title {
@@ -586,8 +587,8 @@ footer {
 
 .Sign-Up button {
   margin: auto;
-  background-color: rgb(145, 105, 174);
-  color: white;
+  background-color: var(--mid);
+  color:var(--white);
   display: block;
   border: none;
   padding: 12px;
@@ -597,7 +598,7 @@ footer {
 }
 
 .Sign-Up button:hover {
-  background-color: rgb(106, 57, 152);
+  background-color: var(--deep);
 }
 
 .Sign-Up .company_name_field {
