@@ -779,19 +779,19 @@ footer {
   padding: 20px 110px;
 }
 
-.stat-card {
+.applied-card {
   background:var(--light);
   padding: 20px;
   border-radius: 12px;
   flex: 1;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.stat-card:hover {
+.applied-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(59, 30, 84, 0.15);
 }
 
-.stat-card h2 {
+.applied-card h2 {
   margin: 10px 0 0;
 }
 
