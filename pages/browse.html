@@ -18,12 +18,14 @@
             width: 280px;
             flex-shrink: 0;
             position: sticky;
-            top:110px;
+            top: 80px;
         }
         .filters-aside h3 {
-            font-size: 25px;
+            font-size: 30px;
+            font-style: italic;
             font-weight: 600;
-            margin-top: 0;
+            padding: 0px 20px;
+            text-shadow: 2px 2px 6px rgba(59, 30, 84, 0.2);
         }
         .filters-aside fieldset {
             min-width: 200px;
@@ -35,11 +37,13 @@
         .filters-aside fieldset legend {
             font-weight: 600;
             padding: 0 5px;
+            font-size: 20px;
         }
         .filters-aside label {
             display: block;
             margin: 6px 0;
             cursor: pointer;
+            font-size: 17px;
         }
         /*___Jobs___*/
         .jobs-section {
@@ -71,7 +75,7 @@
         }
         .search-bar button {
             padding: 10px 40px;
-            background-color: rgb(145, 105, 174);
+            background-color: #3B1E54;
             color: white;
             border: none;
             border-radius: 10px;
@@ -80,6 +84,7 @@
         }
         .search-bar button:hover {
             background-color: rgb(106, 57, 152);
+            
         }
          /*___JobArticles___*/
         .job-list {
@@ -93,17 +98,23 @@
 
         .job-list article {
             border: 1.5px solid #ddd;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 18px 20px;
             display: flex;
             flex-direction: column;
             gap: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(59, 30, 84, 0.06);
+            transition: transform 0.4s ease, box-shadow 0.2s ease;
+        }
+        .job-list article:hover {
+            transform: translateY(-2px) scale(1.005);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         .job-list article h3 {
             margin: 0 0 4px 0;
-            color: rgb(106, 57, 152);
+            color: deep;
             font-size: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .job-list article p {
             margin: 0;
@@ -118,7 +129,7 @@
         .job-list article a {
             margin-top: 8px;
             display: inline-block;
-            color: rgb(145, 105, 174);
+            color: mid;
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
