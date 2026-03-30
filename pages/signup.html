@@ -19,42 +19,42 @@
        </ul>
  </nav>
     <div class="container">
-        <h2 class="form-title"> Create an Account </h2>
+        <h1 class="form-title"> Create Account </h1>
+        <p class="myP"> Join JobBiter and start your journey</p>
 
         <form id="signupForm" action="#" method="POST">
 
             <label for="username"> Username: </label> <br>
-            <input type="text" id="username" name="username"/> <br><br>
+            <input type="text" id="username" name="username" placeholder="John Doe" required/> <br><br>
+
+            <label for="email"> Email Address: </label> <br>
+            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required/> <br><br>
+            
 
             <label for="password"> Password: </label> <br>
-            <input type="password" id="password" name="password"> <br><br>
+            <input type="password" id="password" name="password" minlength="8" placeholder="••••••••" required> <br><br>
 
             <label for="confirm_password"> Confirm Password: </label> <br>
-            <input type="password" id="confirm_password" name="confirm_password"> <br><br>
-
-            <label for="email"> Email: </label> <br>
-            <input type="email" id="email" name="email" > <br><br>
-
-            <label> Account Type: </label> <br>
-
-            <label for="company_radio"> Company Admin </label>
-            <input type="radio" name="account_type" value="company" id="company_radio">
-           
+            <input type="password" id="confirm_password" name="confirm_password" minlength="8" placeholder="••••••••" required> <br><br>
+            <div class="error-message" id="confirmPasswordError"></div>
+            
+            <div class="checkbox-group"> 
+                <input type="checkbox" name="account_type" value="company" id="company_check">
+                <label for="company_check">
+                    I am signing up as a company to post jobs
+                </label> 
+            </div>
 
             <div class="company_name_field">
                 <label for="company_name"> Company Name: </label> <br>
-                <input type="text" id="company_name" name="company_name"> <br><br>
-
+                <input type="text" id="company_name" name="company_name" placeholder="Acme Corporation"> <br><br>
             </div>
-            <label for="user_radio"> Normal User </label>
-            <input type="radio" name="account_type" value="user" id="user_radio">
-            
-
 
             <button type="submit"> Sign Up </button>
+          
         </form>
         <p> Already have an account? <a href="login.html"> Log in </a> </p>
-
+        <div id="signupSuccess" class="success-message"></div>
     </div>
 
     <script src="../JavaScript/signup-script.js"></script>
