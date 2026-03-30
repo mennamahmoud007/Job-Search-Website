@@ -55,14 +55,21 @@ body {
 .navLinks a {
   text-decoration: none;
   color: var(--deep);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.2s;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s;
+  text-transform: uppercase;
 }
 
 .navLinks a:hover {
   color: var(--mid);
+}
+.navLinks a.active {
+    font-weight: bold; 
+    color: var(--deep); 
+    font-size: 18px;
 }
 
 .navLinks .nav-cta {

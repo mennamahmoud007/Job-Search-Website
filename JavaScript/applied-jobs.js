@@ -2,7 +2,7 @@
 //              Applied Jobs Page
 // ============================================
 let applications = JSON.parse(localStorage.getItem("applications")) || [];
-
+//as it saved at the local storage as string so we need to parse it to get the array of objects and if there is no data in local storage we will get null so we need to set it to an empty array to avoid errors when we try to access it.
 let tbody = document.getElementById("jobsBody");
 
 function renderApplications() {
