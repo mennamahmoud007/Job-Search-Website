@@ -2,7 +2,7 @@
 //              Applied Jobs Page
 // ============================================
 let applications = JSON.parse(localStorage.getItem("applications")) || [];
-
+//as it saved at the local storage as string so we need to parse it to get the array of objects and if there is no data in local storage we will get null so we need to set it to an empty array to avoid errors when we try to access it.
 let tbody = document.getElementById("jobsBody");
 
 function renderApplications() {
@@ -19,43 +19,46 @@ function renderApplications() {
         tableContainer.style.display = "block";
        // if(statsSection) statsSection.style.display = "flex";
 
-        tbody.innerHTML = "";
+       let rowsHtml = ""; 
         applications.forEach(function(app) {
-            let row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${app.title} <p class="schedule">Full-time</p></td>
-                <td>${app.company}</td>
-                <td>${app.location}</td>
-                <td>${app.date}</td>
-                <td><span class="badge ${getStatusClass(app.status)}">${app.status}</span></td>
-                <td><a href="#">View Job</a></td>
+            rowsHtml += `
+                <tr>
+                    <td>${app.title || 'Untitled Job'}
+                      <p class="schedule">${app.schedule || 'Full-time'}</p>
+                    </td>
+                    <td>${app.company || 'Unknown Company'}</td>
+                    <td>${app.location || 'Not Specified'}</td>
+                    <td>${app.date || 'Not Specified'}</td>
+                    <td><span class="badge ${getStatusClass(app.status)}">${app.status || 'Applied'}</span></td>
+                    <td><a href="job-details.html?id=${app.jobId}">View Job</a></td>
+                </tr>
             `;
-            tbody.appendChild(row);
         });
+        tbody.innerHTML = rowsHtml; 
     }
 }
 
 function getStatusClass(status) {
-    if (status === "Accepted") return "accepted";
-    if (status === "Rejected") return "rejected";
-    if (status === "Under Review") return "review";
+    let s = status.toLowerCase();
+    if (s === "Accepted") return "accepted";
+    if (s === "Rejected") return "rejected";
+    if (s === "Under Review") return "review";
     return "applied";
 }
 function updateStats() {
 
     let total = applications.length;
 
-    let review = applications.filter(app => app.status === "Under Review").length;
-
-    let accepted = applications.filter(app => app.status === "Accepted").length;
-    let rejected = applications.filter(app => app.status === "Rejected").length;
+    let review = applications.filter(app => app.status.toLowerCase().includes("review")).length;
+    let accepted = applications.filter(app => app.status.toLowerCase() === "accepted").length;
+    let rejected = applications.filter(app => app.status.toLowerCase() === "rejected").length;
 
     let responseRate = total > 0 ? Math.round(((accepted + rejected) / total) * 100) : 0;
 
-    document.getElementById("total").textContent = total;
-    document.getElementById("review").textContent = review;
-    document.getElementById("accepted").textContent = accepted;
-    document.getElementById("response").textContent = responseRate + "%";
+    if(document.getElementById("total")) document.getElementById("total").textContent = total;
+    if(document.getElementById("review")) document.getElementById("review").textContent = review;
+    if(document.getElementById("accepted")) document.getElementById("accepted").textContent = accepted;
+    if(document.getElementById("response")) document.getElementById("response").textContent = responseRate + "%";
     
 }
 

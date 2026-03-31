@@ -55,14 +55,21 @@ body {
 .navLinks a {
   text-decoration: none;
   color: var(--deep);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.2s;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s;
+  text-transform: uppercase;
 }
 
 .navLinks a:hover {
   color: var(--mid);
+}
+.navLinks a.active {
+    font-weight: bold; 
+    color: var(--deep); 
+    font-size: 17px;
 }
 
 .navLinks .nav-cta {
@@ -539,7 +546,7 @@ footer {
   margin-top: 20px;
 }
 
-
+/* Sign-up form  */
 .Sign-Up form {
   background-color: var(--verylight);
   padding: 30px;
@@ -573,8 +580,14 @@ footer {
 }
 
 .Sign-Up .form-title {
-  margin-top: 40px;
   text-align: center;
+  margin-bottom: 0;
+}
+
+.Sign-Up #myP {
+  text-align: center;
+  margin-top: 0;
+  color: #555;
 }
 
 
@@ -597,15 +610,50 @@ footer {
   font-size: 16px;
 }
 
+.Sign-Up .error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+  display: none;
+}
+
+.Sign-Up .input-error {
+  border: 2px solid red;
+  box-shadow: 0 0 5px red;
+}
+
+.Sign-Up .success-message {
+    display: none;     
+    color: #4CAF50;
+    margin-bottom: 15px;   
+    text-align: center;
+    font-weight: bold;
+}
+
 .Sign-Up button:hover {
   background-color: var(--deep);
 }
 
-.Sign-Up .company_name_field {
-  display: none;
+.Sign-Up .checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
+.Sign-Up .checkbox-group input[type="checkbox"] {
+  accent-color: var(--deep);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
 
+.Sign-Up .checkbox-group label {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Add-Job Form */
 .add-job #myH,
 .add-job #myP {
   text-align: center;
