@@ -16,11 +16,11 @@ const allJobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
 // only jobs belong to this company
 const companyJobs = user && user.company //check if user is found 
-    ? allJobs.filter(job => job.companyName === user.company) //compare company name in job with user company
+    ? allJobs.filter(job => job.company === user.company) //compare company name in job with user company
     : allJobs;
 
 // update Stats 
-const totalJobs= companyJobs.length; //no. of jobs for the company
+const totalJobs = companyJobs.length; //no. of jobs for the company
 const openJobs = companyJobs.filter(j => j.status && j.status.toLowerCase() === "open").length;
 const allApplications = JSON.parse(localStorage.getItem("applications")) || [];
 const totalApps = allApplications.filter(app => app.company === user.company).length;
@@ -28,12 +28,12 @@ const pendingReview = allApplications.filter(app => app.company === user.company
 
 //display in the cards
 document.getElementById("stat-total").textContent = totalJobs;
-document.getElementById("stat-open").textContent  = openJobs;
-document.getElementById("stat-apps").textContent  = totalApps;
+document.getElementById("stat-open").textContent = openJobs;
+document.getElementById("stat-apps").textContent = totalApps;
 
 //update pending review
 const statPending = document.getElementById("stat-pending"); //check if the element exists
-if (statPending) statPending.textContent = pendingReview; 
+if (statPending) statPending.textContent = pendingReview;
 
 
 //Job Cards
@@ -49,21 +49,19 @@ if (jobsGrid) {
             </div>
         `;
     } else {
-        companyJobs.forEach(function(job, index) {
-            const isOpen   = job.status && job.status.toLowerCase() === "open";
+        companyJobs.forEach(function (job, index) {
+            const isOpen = job.status && job.status.toLowerCase() === "open";
             const statusClass = isOpen ? "open-color" : "closed-color"; //if true => open color, if not => close color
-            const statusText  = isOpen ? "Open" : "Closed"; //if opened write it and ..... .
+            const statusText = isOpen ? "Open" : "Closed"; //if opened write it and ..... .
             const apps = job.applications || 0; //if not found put 0
 
             // ternary => to add value and default if not found
-            const typeChip     = job.type     ? job.type     : "—";
+            const typeChip = job.schedule ? job.schedule : "—";
             const locationChip = job.location ? job.location : "—";
-            const salaryChip   = job.salary   ? job.salary   : "—";
-            const expChip      = job.experience ? job.experience + " yrs" : "—";
-            const companyLine  = job.companyName && job.location
-                ? `${job.companyName} &mdash; ${job.location}` //if both found write in syntax => name - location
-                : (job.companyName || "—");
-
+            const salaryChip = job.salary ? job.salary : "—";
+            const expChip = job.experience ? job.experience + " yrs" : "—";
+            const companyLine = job.company ? job.company : "—";
+            
             const card = document.createElement("div");
             card.classList.add("job-card"); //adding class for styling => class in css home page
 
@@ -93,7 +91,7 @@ if (jobsGrid) {
                         <a href="add-job.html" style="background:var(--deep); padding:7px 14px; border-radius:8px;">Edit</a>
                         <a href="#" class="delete-link" style="background:#c0392b; padding:7px 14px; border-radius:8px;" data-index="${index}">Delete</a>
                     </div>
-                    <a href="job-details.html?id=${job.jobId}" class="btn-view">View Job Details</a>
+                    <a href="job-details.html?id=${job.id}" class="btn-view">View Job Details</a>
                 </div>
             `;
 
@@ -101,13 +99,13 @@ if (jobsGrid) {
         });
 
         //Delete button
-        jobsGrid.addEventListener("click", function(e) {
+        jobsGrid.addEventListener("click", function (e) {
             if (e.target.classList.contains("delete-link")) { //if the ckicked was delete button
                 e.preventDefault();
                 const idx = parseInt(e.target.dataset.index); //get index job in the array to delete
                 if (confirm("Are you sure you want to delete this job?")) { //pop up confirm
                     const jobToDelete = companyJobs[idx];
-                    const updatedJobs = allJobs.filter(j => j.jobId !== jobToDelete.jobId); //put in the new array all jobs except the deleted ones
+                    const updatedJobs = allJobs.filter(j => j.id !== jobToDelete.id); //put in the new array all jobs except the deleted ones
                     localStorage.setItem("jobs", JSON.stringify(updatedJobs)); //store the updated jobs array in ;ocal storage
                     location.reload(); //reloaded automatically
                 }
