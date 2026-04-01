@@ -5,11 +5,11 @@
 
 const addjobForm = document.getElementById("addjobForm")
 
-if(addjobForm) {
+if (addjobForm) {
 
 
     //for company name auto fill in add form
-    const loggedUser = JSON.parse(localStorage.getItem("user")); 
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
     const companyNameField = document.getElementById("company-name");
     if (loggedUser && loggedUser.company && companyNameField) {
         companyNameField.value = loggedUser.company;
@@ -17,9 +17,9 @@ if(addjobForm) {
     }
 
 
-     addjobForm.addEventListener("submit", function(e) {
+    addjobForm.addEventListener("submit", function (e) {
 
-        
+
         e.preventDefault();
 
         let title = document.getElementById("job-title").value.trim();
@@ -35,7 +35,7 @@ if(addjobForm) {
         let techSkills = document.getElementById("tech-skills").value.trim();
         let softSkills = document.getElementById("soft-skills").value.trim();
         let benefits = document.getElementById("benefits").value.trim();
-        let company= document.getElementById("company-name").value.trim();
+        let company = document.getElementById("company-name").value.trim();
         let industry = document.getElementById("industry").value.trim();
         let companySize = document.getElementById("company-size").value.trim();
         let location = document.getElementById("location").value.trim();
@@ -62,11 +62,12 @@ if(addjobForm) {
             techSkills: techSkills,
             softSkills: softSkills,
             benefits: benefits,
-            company: company, 
+            company: company,
             industry: industry,
             companySize: companySize,
             location: location,
-            creator: creator
+            creator: creator,
+            applications: 0 // Initialize applications to 0 
         };
 
         // Add new job to jobs array
@@ -82,7 +83,6 @@ if(addjobForm) {
         setTimeout(() => {
             successMessage.style.display = "none";
             window.location.href = "dashboard.html";
-        },2000);
+        }, 2000);
     });
 }
-        
