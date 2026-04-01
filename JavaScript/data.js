@@ -3,10 +3,10 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         id: 1,
         title: "Frontend Developer",
         applications: 8,
-        company: "TechCorp - Cairo, Egypt",
+        company: "TechCorp",
         salary: "$2,500/month",
         experience: "2-4",
-        schedule: "full-time",
+        schedule: "full-Time",
         location: "onsite",
         status: "Open",
         link: "job-details.html",
@@ -21,17 +21,18 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         benefits: "Health insurance, Paid leave",
         industry: "Technology",
         companySize: "50-100",
-        creator: "admin"
+        creator: "admin",
+        companyLocation: "Cairo, Egypt"
     },
 
     {
         id: 2,
         title: "Data Analyst",
         applications: 12,
-        company: "Insight Co - Remote",
+        company: "Insight Co",
         salary: "$1,800/month",
         experience: "0-1",
-        schedule: "part-time",
+        schedule: "part-Time",
         location: "remote",
         status: "Open",
         link: "job-details.html",
@@ -46,21 +47,22 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         benefits: "Remote work, Flexible hours",
         industry: "Analytics",
         companySize: "20-50",
-        creator: "admin"
+        creator: "admin",
+        companyLocation: "Cairo, Egypt"
     },
 
     {
         id: 3,
         title: "UI/UX Designer",
         applications: 4,
-        company: "Creative Studio - Alexandria, Egypt",
+        company: "Creative Studio",
         salary: "$2,000/month",
         experience: "2-4",
-        schedule: "full-time",
+        schedule: "full-Time",
         location: "onsite",
         status: "Closed",
         link: "job-details.html",
-
+        
         // ===== Extra Fields for job details =====
         category: "Design",
         description: "Design user-friendly interfaces and improve user experience.",
@@ -71,7 +73,9 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         benefits: "Flexible hours, Bonuses",
         industry: "Design",
         companySize: "10-30",
-        creator: "admin"
+        creator: "admin",
+        companyLocation: "Alexandria, Egypt"
+    
 
     },
 
@@ -79,13 +83,14 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         id: 4,
         title: "Backend Developer",
         applications: 5,
-        company: "NexaSoft - Cairo, Egypt",
+        company: "NexaSoft ",
         salary: "$3,000/month",
         experience: "+4",
-        schedule: "full-time",
+        schedule: "full-Time",
         location: "onsite",
         status: "Open",
         link: "job-details.html",
+
 
         // ===== Extra Fields for job details =====
         category: "Software Development",
@@ -97,7 +102,8 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         benefits: "Health insurance, Annual bonus",
         industry: "Technology",
         companySize: "100+",
-        creator: "admin"
+        creator: "admin",
+        companyLocation: "Cairo, Egypt"
 
     },
 
@@ -105,10 +111,10 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         id: 5,
         title: "Mobile App Developer",
         applications: 3,
-        company: "AppWorks - Alexandria, Egypt",
+        company: "AppWorks ",
         salary: "$2,200/month",
         experience: "2-4",
-        schedule: "full-time",
+        schedule: "Internship",
         location: "onsite",
         status: "Closed",
         link: "job-details.html",
@@ -123,7 +129,8 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         benefits: "Paid leave, Training programs",
         industry: "Technology",
         companySize: "30-70",
-        creator: "admin"
+        creator: "admin",
+        companyLocation: "Alexandria, Egypt"
 
     },
 
@@ -131,10 +138,10 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         id: 6,
         title: "DevOps Engineer",
         applications: 10,
-        company: "CloudBase - Remote",
+        company: "CloudBase",
         salary: "$3,500/month",
         experience: "+4",
-        schedule: "full-time",
+        schedule: "Internship",
         location: "remote",
         status: "Open",
         link: "job-details.html",
@@ -149,7 +156,8 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         benefits: "Remote work, High salary",
         industry: "Cloud Computing",
         companySize: "50-150",
-        creator: "admin"
+        creator: "admin",
+        companyLocation: "Cairo, Egypt"
 
     }
 ];

@@ -1,7 +1,7 @@
 // ============================================
 //              Browse Page
 // ============================================
-const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
+/*const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
     {
         title: "Frontend Developer",
         company: "TechCorp - Cairo, Egypt",
@@ -62,63 +62,83 @@ const jobs = [ //ARRAY OF OBJECTS, EACH OBJECT HAS KEYS
         status: "Open",
         link: "job-details.html"
     }
-];
+];*/ 
 //Create HTML cards dynamically
-function buildCards(jobsArray){
+// function buildCards(jobsArray){
 
-    const jobList = document.querySelector(".job-list");
+//     const jobList = document.querySelector(".job-list");
 
-    jobList.innerHTML=  "";
+//     jobList.innerHTML=  "";
 
-    jobsArray.forEach(function(job) {
-        const li =document.createElement("li");
-        const article = document.createElement("article");
+//     jobsArray.forEach(function(job) {
+//         const li =document.createElement("li");
+//         const article = document.createElement("article");
 
-        article.dataset.schedule = job.schedule;
-        article.dataset.location = job.location;
-        article.dataset.experience = job.experience;
-        //backticks are template literals, allows multiple lines and injection of variables
-        article.innerHTML = ` 
-            <h3>${job.title}</h3>
-            <p>${job.company}</p>
-            <p>Salary: ${job.salary}</p>
-            <p>Experience: ${job.experience}</p>
-            <p>Schedule: ${job.schedule}</p>
-            <span >Status: ${job.status}</span>
-            <a href="${job.link}">View Job Details</a>
+//         article.dataset.schedule = job.schedule;
+//         article.dataset.location = job.location;
+//         article.dataset.experience = job.experience;
+//         //backticks are template literals, allows multiple lines and injection of variables
+//         article.innerHTML = ` 
+//             <h3>${job.title}</h3>
+//             <p>${job.company}</p>
+//             <p>Salary: ${job.salary}</p>
+//             <p>Experience: ${job.experience}</p>
+//             <p>Schedule: ${job.schedule}</p>
+//             <span >Status: ${job.status}</span>
+//             <a href="${job.link}">View Job Details</a>
+//         `;
+
+//         li.appendChild(article);
+//         jobList.appendChild(li);
+//     });
+// }
+const jobListTag = document.querySelector('.job-list');
+const allJobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+function displayJobs(jobsToRender) {
+    jobListTag.innerHTML = ""; 
+    jobsToRender.forEach(job => {
+        jobListTag.innerHTML += `
+            <article>
+                <h3>${job.title}</h3>
+                <p>${job.company} - ${job.location}</p> 
+                <p>Salary: ${job.salary}</p>
+                <p>Experience: ${job.experience}</p>
+                <p>Schedule: ${job.schedule}</p>
+                <span >Status: ${job.status}</span>
+                <a href="job-details.html?id=${job.id}">View Details</a>
+            </article>
         `;
-
-        li.appendChild(article);
-        jobList.appendChild(li);
     });
 }
-    /*______________________________________________________________________ */
-    // WHEN any checkbox changes, run this function
+
+/*______________________________________________________________________ */
+// WHEN any checkbox changes, run this function
 function filterjobs(){
     //Get the values of all checked boxes
     const scheduleValues = Array.from(
-                            document.querySelectorAll(`input[name="schedule"]:checked`))
-                            .map(cb => cb.value);
-    const locationValues = Array.from(
-                            document.querySelectorAll(`input[name="location"]:checked`))
-                            .map(cb => cb.value);
-    const experienceValues = Array.from(
-                            document.querySelectorAll(`input[name="experience"]:checked`))
-                            .map(cb => cb.value);
-    const searchvalue = document.querySelector('#job-search').value.toLowerCase();  
-    //filter each job based on all filters
-    const filteredjobs = jobs.filter(function(job){
-        if(scheduleValues.length > 0 && !scheduleValues.includes(job.schedule))
-            return false;
-        if(locationValues.length > 0 && !locationValues.includes(job.location))
-            return false;
-        if(experienceValues.length > 0 && !experienceValues.includes(job.experience))
-            return false;
-        if(searchvalue && !job.title.toLowerCase().includes(searchvalue))
-            return false;
-        return true;
+        document.querySelectorAll(`input[name="schedule"]:checked`))
+        .map(cb => cb.value);
+        const locationValues = Array.from(
+            document.querySelectorAll(`input[name="location"]:checked`))
+            .map(cb => cb.value);
+            const experienceValues = Array.from(
+                document.querySelectorAll(`input[name="experience"]:checked`))
+                .map(cb => cb.value);
+                const searchvalue = document.querySelector('#job-search').value.toLowerCase();  
+                //filter each job based on all filters
+                const filteredjobs = jobs.filter(function(job){
+                    if(scheduleValues.length > 0 && !scheduleValues.includes(job.schedule))
+                        return false;
+                    if(locationValues.length > 0 && !locationValues.includes(job.location))
+                        return false;
+                    if(experienceValues.length > 0 && !experienceValues.includes(job.experience))
+                        return false;
+                    if(searchvalue && !job.title.toLowerCase().includes(searchvalue))
+                        return false;
+                    return true;
     });
-    buildCards(filteredjobs); //only shows the matching cards
+    displayJobs(filteredjobs); //only shows the matching cards
 }
 //Adds the filterjobs function to each checkbox, once the box is changed the function works
 document.querySelectorAll('input[name="schedule"]').forEach(function(checkbox) {
@@ -134,4 +154,5 @@ document.querySelector('.search-bar').addEventListener("submit", function(e){
     e.preventDefault();
     filterjobs();
 });
-buildCards(jobs); //Displays the cards once the page loads
+// buildCards(jobs); //Displays the cards once the page loads
+displayJobs(allJobs);

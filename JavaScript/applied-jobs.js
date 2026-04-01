@@ -21,28 +21,30 @@ function renderApplications() {
 
        let rowsHtml = ""; 
         applications.forEach(function(app) {
-            rowsHtml += `
-                <tr>
-                    <td>${app.title || 'Untitled Job'}
-                      <p class="schedule">${app.schedule || 'Full-time'}</p>
-                    </td>
-                    <td>${app.company || 'Unknown Company'}</td>
-                    <td>${app.location || 'Not Specified'}</td>
-                    <td>${app.date || 'Not Specified'}</td>
-                    <td><span class="badge ${getStatusClass(app.status)}">${app.status || 'Applied'}</span></td>
-                    <td><a href="job-details.html?id=${app.jobId}">View Job</a></td>
-                </tr>
-            `;
+        rowsHtml += `
+            <tr>
+                <td>
+                    <strong>${app.title || 'Untitled Job'}</strong>
+                    <p class="schedule">${app.schedule || 'Full-time'}</p>
+                </td>
+                <td>${app.company || 'Unknown Company'}</td>
+                <td>${app.location || 'Not Specified'}</td>
+                <td>${app.date || 'Not Specified'}</td>
+                <td><span class="badge ${getStatusClass(app.status)}">${app.status || 'Applied'}</span></td>
+                <td><a href="job-details.html?id=${app.jobId}" class="view-btn">View Job</a></td>
+            </tr>
+        `;
         });
         tbody.innerHTML = rowsHtml; 
     }
 }
 
 function getStatusClass(status) {
-    let s = status.toLowerCase();
-    if (s === "Accepted") return "accepted";
-    if (s === "Rejected") return "rejected";
-    if (s === "Under Review") return "review";
+    if (!status) return "applied";
+    let s = status.toLowerCase(); 
+    if (s === "accepted") return "accepted";
+    if (s === "rejected") return "rejected";
+    if (s === "under review") return "review";
     return "applied";
 }
 function updateStats() {

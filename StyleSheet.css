@@ -954,13 +954,13 @@ footer {
     margin-bottom: 25px;
 }
 .jobs-table {
-  width: 85%;
-  margin: auto;
-  border-collapse: collapse;
+  width: 85% !important;;
+  margin: 30px auto;
   background: white;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: table !important; 
+  border-collapse: collapse;
 }
 
 .jobs-table th {
@@ -970,6 +970,8 @@ footer {
   font-weight: 600;
   color: gray;
   background-color: #f2edf6;
+  display: table-header-group; 
+  width: 100%;
 }
 .jobs-table p {
   font-size: 12px;
@@ -981,19 +983,38 @@ footer {
   padding: 15px;
   border-top: 1px solid #eee;
 }
-.jobs-table a {
-  color: var(--mid);
-  text-decoration: none;
-  font-weight: 500;
+.jobs-table th, .jobs-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    display: table-cell !important; 
+    vertical-align: middle;
 }
-
+.jobs-table tbody {
+    display: table-row-group;
+    width: 100%;
+}
+.jobs-table a {
+  background-color: var(--deep);
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+}
 .jobs-table a:hover {
   text-decoration: underline;
+  .jobs-table tr {
+      display: table-row !important; 
+      width: 100%;
+  }
 }
 
 .jobs-table tr:hover {
 background: #f2edf6;
 }
+
 .badge {
   padding: 5px 12px;
   border-radius: 20px;
