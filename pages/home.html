@@ -25,7 +25,7 @@
       <p>Thousands of curated opportunities in one place. Find the role that fits your skills, your goals, and your life.</p>
       <div class="hook-btns">
         <a href="guestBrowse.html" class="btn-primary">Browse Jobs</a>
-        <a href="home.html" class="btn-secondary">Learn More</a>
+        <a href="#features" class="btn-secondary">Learn More</a>
       </div>
     </div>
     <div class="hook-visual">
@@ -48,7 +48,7 @@
     </div>
   </section>
 
-  <section class="features">
+  <section class="features", id="features">
     <p class="section-label">Why Jobbiter ?</p>
     <h2 class="section-title">Everything you need to land the role</h2>
     <div class="features-grid">
@@ -147,6 +147,13 @@
   <footer>
     <p>© 2026 Jobbiter Jobs </p>
   </footer>
+
+  <script>
+  document.querySelector('a[href="#features"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
 
 </body>
 </html>
