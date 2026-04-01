@@ -540,6 +540,30 @@ footer {
   margin-top: 20px;
 }
 
+#application-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border:none;
+        padding: 20px;
+        gap: 15px;
+      }
+      .applylabels {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+      .apply-input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+      }
+      .apply-form{
+        display:none;
+      }
+      
+
 /* Sign-up form  */
 .Sign-Up form {
   background-color: var(--verylight);
