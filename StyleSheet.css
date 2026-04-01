@@ -3,6 +3,7 @@
   --deep: #3B1E54;
   --mid: #9B7EBD;
   --light: #D4BEE4;
+  --verylight: #EADCF5;
   --pale: #EEEEEE;
   --white: #ffffff;
 }
@@ -54,14 +55,21 @@ body {
 .navLinks a {
   text-decoration: none;
   color: var(--deep);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.2s;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s;
+  text-transform: uppercase;
 }
 
 .navLinks a:hover {
   color: var(--mid);
+}
+.navLinks a.active {
+    font-weight: bold; 
+    color: var(--deep); 
+    font-size: 17px;
 }
 
 .navLinks .nav-cta {
@@ -532,9 +540,9 @@ footer {
   margin-top: 20px;
 }
 
-
+/* Sign-up form  */
 .Sign-Up form {
-  background-color: #F3E8FF;
+  background-color: var(--verylight);
   padding: 30px;
   border-radius: 10px;
   width: 400px;
@@ -553,7 +561,7 @@ footer {
   padding: 12px;
   margin-top: 6px;
   margin-bottom: 15px;
-  border: 1px solid #C4B5FD;
+  border: 1px solid var(--mid);
   border-radius: 8px;
   font-size: 14px;
   box-sizing: border-box;
@@ -561,13 +569,19 @@ footer {
 
 .Sign-Up input:focus {
   outline: none;
-  border-color: #7C3AED;
-  box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+  border-color: var(--deep);
+  box-shadow: 0 0 5px var(--mid);
 }
 
 .Sign-Up .form-title {
-  margin-top: 40px;
   text-align: center;
+  margin-bottom: 0;
+}
+
+.Sign-Up #myP {
+  text-align: center;
+  margin-top: 0;
+  color: #555;
 }
 
 
@@ -580,8 +594,8 @@ footer {
 
 .Sign-Up button {
   margin: auto;
-  background-color: rgb(145, 105, 174);
-  color: white;
+  background-color: var(--mid);
+  color:var(--white);
   display: block;
   border: none;
   padding: 12px;
@@ -590,15 +604,50 @@ footer {
   font-size: 16px;
 }
 
-.Sign-Up button:hover {
-  background-color: rgb(106, 57, 152);
-}
-
-.Sign-Up .company_name_field {
+.Sign-Up .error-message {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
   display: none;
 }
 
+.Sign-Up .input-error {
+  border: 2px solid red;
+  box-shadow: 0 0 5px red;
+}
 
+.Sign-Up .success-message {
+    display: none;     
+    color: #4CAF50;
+    margin-bottom: 15px;   
+    text-align: center;
+    font-weight: bold;
+}
+
+.Sign-Up button:hover {
+  background-color: var(--deep);
+}
+
+.Sign-Up .checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.Sign-Up .checkbox-group input[type="checkbox"] {
+  accent-color: var(--deep);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.Sign-Up .checkbox-group label {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Add-Job Form */
 .add-job #myH,
 .add-job #myP {
   text-align: center;
@@ -613,9 +662,15 @@ footer {
   color: #555;
 }
 
+.add-job #myP2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #555;
+}
+
 .add-job form {
   max-width: 600px;
-  margin: 40px auto;
+  margin: 20px auto 40px auto;
   background-color: #F3E8FF;
   padding: 25px;
   border-radius: 10px;
@@ -660,20 +715,67 @@ footer {
   box-shadow: 0 0 5px rgba(145, 105, 174, 0.5);
 }
 
-.add-job button {
+.add-job .form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.add-job button[type="submit"] {
   background-color: rgb(145, 105, 174);
   color: white;
   border: none;
   padding: 10px 20px;
   margin: 10px auto;
-  display: block;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block;
+  flex: 1;
 }
 
-.add-job button:hover {
+.add-job button[type="submit"]:hover {
   background-color: rgb(106, 57, 152);
 }
+
+.add-job .cancel-btn {
+  background-color: white;
+  color: #000;
+  border: 1.5px solid #C4B5FD;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  flex: 1;
+}
+
+.add-job .cancel-btn:hover {
+  background-color: #ececec;
+}
+
+.add-job .success-message {
+    display: none;     
+    color: #4CAF50;
+    margin-bottom: 15px;   
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-job .back-link {
+  display: block;
+  margin: 20px auto 0px auto;
+  color: #555;
+  text-decoration: none;
+  max-width: 800px;
+  font-size: 16px;
+  padding-left: 160px;
+}
+
+.add-job .back-link:hover {
+  color: #000;
+}
+
 
 
 /* Login page */
@@ -748,6 +850,151 @@ footer {
 
 .LogIn #signup-link :hover {
   color: rgb(145, 105, 174);
+}
+
+/* Applied jobs page */
+
+.container {
+  padding: 40px 110px 0 110px;
+}
+#head {
+  text-align: left;
+  margin: 0px ;
+  font-size: 48px;
+  color: #3B1E54;
+}
+#desc {
+  text-align: left;
+  margin: 10px 0px 0px;
+  font-size: 18px;
+  color: #555;
+}
+.stats {
+  display: flex;
+  gap: 20px;
+  padding: 20px 110px;
+}
+
+.applied-card {
+  background:var(--light);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.applied-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(59, 30, 84, 0.15);
+}
+
+.applied-card h2 {
+  margin: 10px 0 0;
+}
+
+.response {
+  background: var(--white);
+  color: var(--deep);
+}
+
+.highlight {
+  background:var(--deep);
+  color: white;
+}
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    width: 85%;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.empty-icon {
+    font-size: 50px;
+    background: #f3f0f7;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.empty-state h2 {
+    color: var(--deep);
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #555;
+    margin-bottom: 25px;
+}
+.jobs-table {
+  width: 85%;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.jobs-table th {
+  text-align: left;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: gray;
+  background-color: #f2edf6;
+}
+.jobs-table p {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.jobs-table td {
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+.jobs-table a {
+  color: var(--mid);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.jobs-table a:hover {
+  text-decoration: underline;
+}
+
+.jobs-table tr:hover {
+background: #f2edf6;
+}
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.accepted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.review {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.applied {
+  background: #e0e7ff;
+  color: #3730a3;
 }
 
 
