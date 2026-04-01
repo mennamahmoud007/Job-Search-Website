@@ -53,7 +53,7 @@ if (jobsGrid) {
             const isOpen = job.status && job.status.toLowerCase() === "open";
             const statusClass = isOpen ? "open-color" : "closed-color"; //if true => open color, if not => close color
             const statusText = isOpen ? "Open" : "Closed"; //if opened write it and ..... .
-            const apps = job.applications || 0; //if not found put 0
+            const apps = allApplications.filter(app => app.jobId == job.id).length; //dynamic applications
 
             // ternary => to add value and default if not found
             const typeChip = job.schedule ? job.schedule : "—";
