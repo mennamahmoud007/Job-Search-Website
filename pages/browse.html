@@ -4,140 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Jobs </title>   
-    <link rel="stylesheet" href="../StyleSheet.css" >
-    <style> 
-     /*___pageWrapper___*/
-        .page-wrapper {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            padding: 30px;
-        }
-        /*___filters___*/
-        .filters-aside {
-            width: 280px;
-            flex-shrink: 0;
-            position: sticky;
-            top: 80px;
-        }
-        .filters-aside h3 {
-            font-size: 30px;
-            font-style: italic;
-            font-weight: 600;
-            padding: 0px 20px;
-            text-shadow: 2px 2px 6px rgba(59, 30, 84, 0.2);
-        }
-        .filters-aside fieldset {
-            min-width: 200px;
-            padding: 12px 20px;
-            margin-bottom: 14px;
-            border: 1.5px solid #bbb;
-            border-radius: 10px;
-        }
-        .filters-aside fieldset legend {
-            font-weight: 600;
-            padding: 0 5px;
-            font-size: 20px;
-        }
-        .filters-aside label {
-            display: block;
-            margin: 6px 0;
-            cursor: pointer;
-            font-size: 17px;
-        }
-        /*___Jobs___*/
-        .jobs-section {
-            flex: 1;                  
-            min-width: 0;
-        }
-        .search-bar-wrapper {
-            display: block;
-            text-align: center;
-            margin-bottom: 24px;
-        }
-        .search-bar-wrapper label {
-            display: block;
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-        .search-bar {
-            display: flex;
-            justify-content:center;
-            gap: 20px;
-        }
-        .search-bar input[type="search"] {
-            width: 400px;
-            padding: 9px 14px;
-            font-size: 15px;
-            border: 1.5px solid #bbb;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        .search-bar button {
-            padding: 10px 40px;
-            background-color: #3B1E54;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        .search-bar button:hover {
-            background-color: rgb(106, 57, 152);
-            
-        }
-         /*___JobArticles___*/
-        .job-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .job-list article {
-            border: 1.5px solid #ddd;
-            border-radius: 12px;
-            padding: 18px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            box-shadow: 0 2px 8px rgba(59, 30, 84, 0.06);
-            transition: transform 0.4s ease, box-shadow 0.2s ease;
-        }
-        .job-list article:hover {
-            transform: translateY(-2px) scale(1.005);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-        .job-list article h3 {
-            margin: 0 0 4px 0;
-            color: deep;
-            font-size: 20px;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .job-list article p {
-            margin: 0;
-            font-size: 18px;
-            color: #444;
-        }
-        .job-list article span {
-            font-size: 16px;
-            font-weight: 600;
-            color: green;
-        }
-        .job-list article a {
-            margin-top: 8px;
-            display: inline-block;
-            color: mid;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-        }
-        .job-list article a:hover {
-            text-decoration: underline;
-        }
-    </style>  
+    <link rel="stylesheet" href="../StyleSheet.css" > 
+   
 </head>
 <body>
 
@@ -156,9 +24,9 @@
             <h3>Filters</h3>
             <fieldset>
                 <legend>Work Schedule</legend>
-            <label><input type="checkbox" name="schedule" value="full-time"> full-time</label> <br>
-            <label><input type="checkbox" name="schedule" value="part-time"> part-time</label> <br>
-            <label><input type="checkbox" name="schedule" value="internship"> Internship</label>
+            <label><input type="checkbox" name="schedule" value="Full-time"> Full-Time</label> <br>
+            <label><input type="checkbox" name="schedule" value="Part-time"> Part-Time</label> <br>
+            <label><input type="checkbox" name="schedule" value="Internship"> Internship</label>
             </fieldset>
 
             <fieldset> 
@@ -189,7 +57,7 @@
             </ul>
         </section>
     </div>
-    <script src="../JavaScript/data.js" ></script>
+    <script src="../JavaScript/data.js"></script>
     <script src="../JavaScript/browsescript.js"></script>
 </body>
 </html>
