@@ -68,6 +68,7 @@ let phoneInput = document.querySelector('input[name="phone"]');
   let emailvalid = false;
   let phonevalid = false;
   let resumevalid = false;
+  e.preventDefault(); // Prevent form submission to validate first
   if (nameInput.value !="" && nameInput.value.length < 100){
     namevalid = true;
   }
@@ -105,8 +106,8 @@ let phoneInput = document.querySelector('input[name="phone"]');
     let applications = JSON.parse(localStorage.getItem('applications')) || []; // Get existing applications from localStorage or initialize an empty array
     applications.push(application); // Add the new application to the array
     localStorage.setItem('applications', JSON.stringify(applications)); // Save the updated applications array back to localStorage
-      alert("Application submitted successfully!");
       window.location.href = "../pages/applied-jobs.html";
+      console.log("redirecting to applied jobs page...");
       console.log(applications);
   }
   else{
