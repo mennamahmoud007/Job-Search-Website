@@ -7,6 +7,16 @@ const addjobForm = document.getElementById("addjobForm")
 
 if(addjobForm) {
 
+
+    //for company name auto fill in add form
+    const loggedUser = JSON.parse(localStorage.getItem("user")); 
+    const companyNameField = document.getElementById("company-name");
+    if (loggedUser && loggedUser.company && companyNameField) {
+        companyNameField.value = loggedUser.company;
+        companyNameField.readOnly = true;//read only to prevent change
+    }
+
+
      addjobForm.addEventListener("submit", function(e) {
 
         
