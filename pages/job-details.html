@@ -18,36 +18,35 @@
     <main class="job-details-page">
   <section class="job-details-main-container">
     <div class="job-details-main-containers">
-      <h3>Job Information</h3>
-      <h1>Job Title</h1>
-      <p>Job ID<p>
-      <p><span>Full-time</span> <span>Remote</span></p>
-      <p>Job Category</p>
+      <h1 id="job-title">Job Title</h1>
+      <p id="job-id">Job ID</p>
+       <p id="schedule">Job Schedule</p>
+      <p id="job-category">Job Category</p>
     </div>
 
     <div class="job-details-main-containers">
       <h3>Job Details</h3>
       <ul>
-        <li>Job Status</li>
-        <li>Job Description</li>
-        <li>Salary</li>
+        <li id="location">Job Type</li>
+        <li id="job-desc">Job Description</li>
+        <li id="job-salary">Salary</li>
       </ul>
     </div>
 
     <div class="job-details-main-containers">
       <h3>Job Requirements</h3>
       <ul>
-        <li>Education</li>
-        <li>Experience</li>
-        <li>Gender Preference</li>
-        <li>Tech Skills</li>
-        <li>Soft Skills</li>
+        <li id="job-edu">Education</li>
+        <li id="job-exp">Experience</li>
+        <li id="job-gender">Gender Preference</li>
+        <li id="tech-skills">Tech Skills</li>
+        <li id="soft-skills">Soft Skills</li>
       </ul>
     </div>
 
     <div class="job-details-main-containers">
-      <h3>Job Benefits</h3>
-      <ul>
+      <h3 >Job Benefits</h3>
+      <ul id="benefits-list">
         <li>Health Insurance</li>
         <li>Retirement Plan</li>
         <li>Flexible Working Hours</li>
@@ -57,29 +56,44 @@
 
     <div class="job-details-main-containers">
       <h3>Company Information</h3>
-      <p>Company Name</p>
-      <p>Industry</p>
-      <p>Company Size</p>
-      <p>Company Location</p>
+      <p id="company-name">Company Name</p>
+      <p id="company-industry">Industry</p>
+      <p id="company-size">Company Size</p>
+      <p id="company-location">Company Location</p>
     </div>
   </section>
 
   <aside id="job-details-sidebar">
-    <div class="job-details-sidebar-containers" ">
-      <button class="btn-primary apply-job-btn">Apply Now</button>
-      <button class="btn-primary apply-job-btn">Save Job</button>
+    <div class="job-details-sidebar-containers" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; " >
+      <button class="btn-primary apply-job-btn" id="apply-btn">Apply Now</button>
       <button class="share-btn"><img src="share-icon2.png" alt="Share" class="share-icon"></button>
+    </div>
+    <div class="apply-form job-details-sidebar-containers">
+      <form id="application-form">
+        <h3>Fill out the Application Form</h3>
+        <label class="applylabels">Name</label>
+        <input type="text" placeholder="Enter your name" class="apply-input" name="name">
+        <label class="applylabels">Email</label>
+        <input type="email" placeholder="Enter your email" class="apply-input" name="email">
+        <label class="applylabels">Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number" class="apply-input" name="phone">
+          <label class="applylabels">Resume</label>
+        <input type="file" class="apply-input" name="resume">
+        <input type="submit" class="btn-primary" value="Submit Application">
+      </form>
     </div>
 
     <div class="job-details-sidebar-containers">
       <h3>Similar Jobs</h3>
-      <ul>
-        <li><a href="#">Similar Job 1</a></li>
-        <li><a href="#">Similar Job 2</a></li>
-        <li><a href="#">Similar Job 3</a></li>
+      <ul id="similar-jobs-list">
+        <li><a href="#" >Similar Job 1</a></li>
+        <li><a href="#" >Similar Job 2</a></li>
+        <li><a href="#" >Similar Job 3</a></li>
       </ul>
     </div>
   </aside>
-</main> 
+</main>
+  <script src="../JavaScript/data.js"></script>
+<script src="../JavaScript/jobdetails.js"></script> 
 </body>
 </html>

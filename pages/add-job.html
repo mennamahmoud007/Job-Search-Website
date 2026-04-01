@@ -16,32 +16,24 @@
             <li><a href="home.html"> Logout </a></li>
         </ul>
     </nav>
-    <h1 id="myH"> Add / Edit a Job </h1>
-    <p id="myP"> Company admins can use this form to add a new job or edit an existing one. </p>
-
-    
-    <!-- When the admin clicks "Add Job", the form submits the job data
-    and redirects to the dashboard page.
-
-    In next phase using JavaScript the submitted job will be saved and displayed in the dashboard job list. -->
-    
+    <h1 id="myH"> Add New Job Posting </h1>
+    <p id="myP"> Company admins can use this form to add a new job. </p>
+    <a href="dashboard.html" class="back-link"> &larr; Back to Dashboard </a>
 
     <form id="addjobForm" action="dashboard.html" method="Post">
+        <p id="myP2">Fill in the details to create a new job posting</p>
         <fieldset>
 
         <legend> Job Information </legend>
 
-        <label for="job-id"> Job ID: </label>
-        <input type="number" id="job-id" name="job-id" placeholder="Enter Job ID" required> <br><br>
-
         <label for="job-title"> Job Title: </label>
         <input type="text" id="job-title" name="job-title" placeholder="e.g. Software Engineer" required> <br><br>
 
-        <label for="job-type"> Job Type: </label>
-        <select id="job-type" name="job-type" required>
-            <option value="full-time"> Full-time</option>
-            <option value="part-time"> Part-time</option>
-            <option value="remote"> Remote</option>
+        <label for="job-schedule">  Schedule: </label>
+        <select id="job-schedule" name="job-schedule" required>
+            <option value="Full-time"> Full-time</option>
+            <option value="Part-time"> Part-time</option>
+            <option value="Internship"> Internship</option>
         </select> <br><br>
 
         <label for="category"> Job Category: </label>
@@ -54,15 +46,18 @@
 
         <label for="status"> Job Status: </label>
         <select id="status" name="status" required>
-            <option value="open"> Open</option>
-            <option value="closed"> Closed</option>
+            <option value="Open"> Open</option>
+            <option value="Closed"> Closed</option>
         </select> <br><br>
 
+        <label for="applications"> Applications: </label>
+        <input type="text" id="applications" name="applications" placeholder="e.g. 10" required> <br><br>
+
         <label for="job-description"> Job Description: </label>
-        <textarea id="job-description" name="job-description" rows="5" cols="50" placeholder="Enter Job Description" required></textarea> <br><br>
+        <textarea id="job-description" name="job-description" rows="5" cols="50" placeholder="Describe the role, responsibilities and what makes this opportunity special..." required></textarea> <br><br>
 
         <label for="job-salary"> Salary: </label>
-        <input type="number" id="job-salary" name="job-salary" placeholder=" Enter Salary" required> <br><br>
+        <input type="text" id="job-salary" name="job-salary" placeholder="e.g. $2,500/month" required> <br><br>
 
         </fieldset>
 
@@ -70,23 +65,20 @@
         <legend> Job Requirements </legend>
 
         <label for="education"> Education Level: </label>
-        <select id="education" name="education" required>
-            <option value="high-school"> High School</option>
-            <option value="diploma"> Diploma</option>
-            <option value="bachelor"> Bachelor’s Degree</option>
-            <option value="master"> Master’s Degree</option>
-            <option value="phd"> PhD</option>
-            <option value="other"> Other</option>
-        </select> <br><br>
+        <input type="text" id="education" name="education" placeholder="e.g. Bachelor's Degree in Computer Science" required> <br><br>
 
         <label for="experience"> Years of Experience: </label>
-        <input type="number" id="experience" name="experience" placeholder="e.g. 2" required> <br><br>
+        <select id="experience" name="experience" required>
+            <option value="0-1"> 0-1 years</option>
+            <option value="2-4"> 2-4 years</option>
+            <option value="+4"> +4 years</option>
+        </select> <br><br>
 
         <label for="gender"> Preferred Gender: </label>
         <select id="gender" name="gender" required>
-            <option value="male"> Male</option>
-            <option value="female"> Female</option>
-            <option value="any"> Any</option>
+            <option value="Male"> Male</option>
+            <option value="Female"> Female</option>
+            <option value="Any"> Any</option>
         </select> <br><br>
 
         <label for="tech-skills"> Technical Skills: </label>
@@ -109,19 +101,20 @@
         <legend> Company Information </legend>
 
         <label for="company-name"> Company Name: </label>
-        <input type="text" id="company-name" name="company-name" placeholder="Enter Company Name" required> <br><br>
+        <input type="text" id="company-name" name="company-name" placeholder="e.g. TechCorp - Cairo, Egypt" required> <br><br>
 
         <label for="industry"> Industry: </label>
         <input type="text" id="industry" name="industry" placeholder="e.g. IT, Marketing" required> <br><br>
 
         <label for="company-size"> Company Size: </label>
-        <input type="number" id="company-size" name="company-size" placeholder="e.g. 50" required> <br><br>
+        <input type="text" id="company-size" name="company-size" placeholder="e.g. 50 -100" required> <br><br>
 
         <label for="location"> Location: </label>
-        <input type="text" id="location" name="location" placeholder="Enter Job Location" required> <br><br>
+        <select id="location" name="location" required>
+            <option value="onsite"> onsite</option>
+            <option value="remote"> remote</option>
+        </select> <br><br>
 
-
-        
         </fieldset>
 
         <fieldset>
@@ -130,11 +123,16 @@
         <input type="text" id="creator" name="creator" placeholder="Enter Admin Name" required> <br><br>
 
         </fieldset>
+    
+    <div class="form-buttons">
+        <button type="button" class="cancel-btn" onclick="window.location.href='dashboard.html'"> Cancel </button>
+        <button type="submit"> Add Job </button>
+    </div>
 
-    <button type="submit"> Add Job </button>
-    <button type="reset"> Reset Form </button>
+    <div id="addjobSuccess" class="success-message"></div>
     </form>
-
+  
+    <script src="../JavaScript/data.js"></script>
     <script src="../JavaScript/addjob-script.js"></script>
 
 </body>

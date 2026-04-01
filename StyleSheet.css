@@ -473,12 +473,7 @@ footer {
 }
 
 /* job details page */
-.apply-job-btn {
-  border-radius: 40px;
-  padding: 14px 25px;
-  margin-bottom: 10 px;
 
-}
 
 .share-btn {
   background-color: transparent;
@@ -488,7 +483,6 @@ footer {
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   transition: filter 0.2s;
@@ -545,6 +539,30 @@ footer {
   flex: 3;
   margin-top: 20px;
 }
+
+#application-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border:none;
+        padding: 20px;
+        gap: 15px;
+      }
+      .applylabels {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+      .apply-input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+      }
+      .apply-form{
+        display:none;
+      }
+      
 
 /* Sign-up form  */
 .Sign-Up form {
@@ -668,10 +686,16 @@ footer {
   color: #555;
 }
 
+.add-job #myP2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #555;
+}
+
 .add-job form {
   max-width: 600px;
-  margin: 40px auto;
-  background-color: var(--verylight);
+  margin: 20px auto 40px auto;
+  background-color: #F3E8FF;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -715,20 +739,67 @@ footer {
   box-shadow: 0 0 5px rgba(145, 105, 174, 0.5);
 }
 
-.add-job button {
+.add-job .form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.add-job button[type="submit"] {
   background-color: rgb(145, 105, 174);
   color: white;
   border: none;
   padding: 10px 20px;
   margin: 10px auto;
-  display: block;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block;
+  flex: 1;
 }
 
-.add-job button:hover {
+.add-job button[type="submit"]:hover {
   background-color: rgb(106, 57, 152);
 }
+
+.add-job .cancel-btn {
+  background-color: white;
+  color: #000;
+  border: 1.5px solid #C4B5FD;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  flex: 1;
+}
+
+.add-job .cancel-btn:hover {
+  background-color: #ececec;
+}
+
+.add-job .success-message {
+    display: none;     
+    color: #4CAF50;
+    margin-bottom: 15px;   
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-job .back-link {
+  display: block;
+  margin: 20px auto 0px auto;
+  color: #555;
+  text-decoration: none;
+  max-width: 800px;
+  font-size: 16px;
+  padding-left: 160px;
+}
+
+.add-job .back-link:hover {
+  color: #000;
+}
+
 
 
 /* Login page */
@@ -883,13 +954,13 @@ footer {
     margin-bottom: 25px;
 }
 .jobs-table {
-  width: 85%;
-  margin: auto;
-  border-collapse: collapse;
+  width: 85% !important;;
+  margin: 30px auto;
   background: white;
   border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: table !important; 
+  border-collapse: collapse;
 }
 
 .jobs-table th {
@@ -899,6 +970,8 @@ footer {
   font-weight: 600;
   color: gray;
   background-color: #f2edf6;
+  display: table-header-group; 
+  width: 100%;
 }
 .jobs-table p {
   font-size: 12px;
@@ -910,19 +983,38 @@ footer {
   padding: 15px;
   border-top: 1px solid #eee;
 }
-.jobs-table a {
-  color: var(--mid);
-  text-decoration: none;
-  font-weight: 500;
+.jobs-table th, .jobs-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    display: table-cell !important; 
+    vertical-align: middle;
 }
-
+.jobs-table tbody {
+    display: table-row-group;
+    width: 100%;
+}
+.jobs-table a {
+  background-color: var(--deep);
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+}
 .jobs-table a:hover {
   text-decoration: underline;
+  .jobs-table tr {
+      display: table-row !important; 
+      width: 100%;
+  }
 }
 
 .jobs-table tr:hover {
 background: #f2edf6;
 }
+
 .badge {
   padding: 5px 12px;
   border-radius: 20px;
@@ -1168,3 +1260,140 @@ background: #f2edf6;
 .add-job-row button:hover {
   background: var(--mid);
 }
+
+/* ============================================
+//              Browse Page
+   ============================================*/
+
+/*___pageWrapper___*/
+        .page-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 30px;
+        }
+        /*___filters___*/
+        .filters-aside {
+            width: 280px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 80px;
+        }
+        .filters-aside h3 {
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 600;
+            padding: 0px 20px;
+            text-shadow: 2px 2px 6px rgba(59, 30, 84, 0.2);
+        }
+        .filters-aside fieldset {
+            min-width: 200px;
+            padding: 12px 20px;
+            margin-bottom: 14px;
+            border: 1.5px solid #bbb;
+            border-radius: 10px;
+        }
+        .filters-aside fieldset legend {
+            font-weight: 600;
+            padding: 0 5px;
+            font-size: 20px;
+        }
+        .filters-aside label {
+            display: block;
+            margin: 6px 0;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        /*___Jobs___*/
+        .jobs-section {
+            flex: 1;                  
+            min-width: 0;
+        }
+        .search-bar-wrapper {
+            display: block;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .search-bar-wrapper label {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content:center;
+            gap: 20px;
+        }
+        .search-bar input[type="search"] {
+            width: 400px;
+            padding: 9px 14px;
+            font-size: 15px;
+            border: 1.5px solid #bbb;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .search-bar button {
+            padding: 10px 40px;
+            background-color: #3B1E54;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .search-bar button:hover {
+            background-color: rgb(106, 57, 152);
+            
+        }
+         /*___JobArticles___*/
+        .job-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .job-list article {
+            border: 1.5px solid #ddd;
+            border-radius: 12px;
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(59, 30, 84, 0.06);
+            transition: transform 0.4s ease, box-shadow 0.2s ease;
+        }
+        .job-list article:hover {
+            transform: translateY(-2px) scale(1.005);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .job-list article h3 {
+            margin: 0 0 4px 0;
+            color: deep;
+            font-size: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .job-list article p {
+            margin: 0;
+            font-size: 18px;
+            color: #444;
+        }
+        .job-list article span {
+            font-size: 16px;
+            font-weight: 600;
+            color: green;
+        }
+        .job-list article a {
+            margin-top: 8px;
+            display: inline-block;
+            color: mid;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--deep);
+        }
+        .job-list article a:hover {
+            text-decoration: underline;
+        }

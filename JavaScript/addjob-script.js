@@ -5,18 +5,28 @@
 
 const addjobForm = document.getElementById("addjobForm")
 
-if(addjobForm) {
+if (addjobForm) {
 
-     addjobForm.addEventListener("submit", function(e) {
 
-        
+    //for company name auto fill in add form
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    const companyNameField = document.getElementById("company-name");
+    if (loggedUser && loggedUser.company && companyNameField) {
+        companyNameField.value = loggedUser.company;
+        companyNameField.readOnly = true;//read only to prevent change
+    }
+
+
+    addjobForm.addEventListener("submit", function (e) {
+
+
         e.preventDefault();
 
-        let jobId = document.getElementById("job-id").value.trim();
         let title = document.getElementById("job-title").value.trim();
-        let type = document.getElementById("job-type").value;
+        let schedule = document.getElementById("job-schedule").value;
         let category = document.getElementById("category").value.trim();
         let status = document.getElementById("status").value;
+        let applications = parseInt(document.getElementById("applications").value.trim()) || 0;
         let description = document.getElementById("job-description").value.trim();
         let salary = document.getElementById("job-salary").value.trim();
         let education = document.getElementById("education").value;
@@ -25,19 +35,40 @@ if(addjobForm) {
         let techSkills = document.getElementById("tech-skills").value.trim();
         let softSkills = document.getElementById("soft-skills").value.trim();
         let benefits = document.getElementById("benefits").value.trim();
-        let companyName = document.getElementById("company-name").value.trim();
+        let company = document.getElementById("company-name").value.trim();
         let industry = document.getElementById("industry").value.trim();
         let companySize = document.getElementById("company-size").value.trim();
         let location = document.getElementById("location").value.trim();
         let creator = document.getElementById("creator").value.trim();
 
-        let job = {
-            jobId,title,type,category,status,description, salary,education,experience,gender,
-            techSkills,softSkills,benefits,companyName,industry,companySize,location,creator
-        };
-
-         // Get existing jobs from localStorage or initialize array
+        // Get existing jobs from localStorage or initialize array
         let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+        // Auto-increment job ID based on last job in the array or start at 1 if no jobs exist
+        let id = jobs.length > 0 ? jobs[jobs.length - 1].id + 1 : 1;
+
+        let job = {
+            id: id,
+            title: title,
+            applications: applications,
+            schedule: schedule,
+            category: category,
+            status: status,
+            description: description,
+            salary: salary,
+            education: education,
+            experience: experience,
+            gender: gender,
+            techSkills: techSkills,
+            softSkills: softSkills,
+            benefits: benefits,
+            company: company,
+            industry: industry,
+            companySize: companySize,
+            location: location,
+            creator: creator,
+            applications: 0 // Initialize applications to 0 
+        };
 
         // Add new job to jobs array
         jobs.push(job);
@@ -45,10 +76,13 @@ if(addjobForm) {
         // Save back to localStorage
         localStorage.setItem("jobs", JSON.stringify(jobs));
 
-        alert("Job added successfully!");
+        const successMessage = document.getElementById("addjobSuccess");
+        successMessage.textContent = "Job added successfully!";
+        successMessage.style.display = "block";
 
-        // Redirect to dashboard
-        window.location.href = "dashboard.html";
+        setTimeout(() => {
+            successMessage.style.display = "none";
+            window.location.href = "dashboard.html";
+        }, 2000);
     });
 }
-        
