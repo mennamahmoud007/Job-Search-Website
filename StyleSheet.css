@@ -465,12 +465,7 @@ footer {
 }
 
 /* job details page */
-.apply-job-btn {
-  border-radius: 40px;
-  padding: 14px 25px;
-  margin-bottom: 10 px;
 
-}
 
 .share-btn {
   background-color: transparent;
@@ -480,7 +475,6 @@ footer {
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   transition: filter 0.2s;

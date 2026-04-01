@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Details</title>
     <link rel="stylesheet" href="../StyleSheet.css" >
+    <style>
+      #application-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border:none;
+        padding: 20px;
+        gap: 15px;
+      }
+      .applylabels {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+      .apply-input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+      }
+      .apply-form{
+        display:none;
+      }
+      
+    </style>
 </head>
 <body>
      <nav class="navbar">
@@ -18,7 +43,7 @@
     <main class="job-details-page">
   <section class="job-details-main-container">
     <div class="job-details-main-containers">
-      <h1>Job Title</h1>
+      <h1 id="job-title">Job Title</h1>
       <p><span>Full-time</span> <span>Remote</span></p>
       <p>Job Category</p>
     </div>
@@ -55,18 +80,31 @@
 
     <div class="job-details-main-containers">
       <h3>Company Information</h3>
-      <p>Company Name</p>
+      <p id="company-name">Company Name</p>
       <p>Industry</p>
       <p>Company Size</p>
-      <p>Company Location</p>
+      <p id="location">Company Location</p>
     </div>
   </section>
 
   <aside id="job-details-sidebar">
-    <div class="job-details-sidebar-containers" ">
-      <button class="btn-primary apply-job-btn">Apply Now</button>
-      <button class="btn-primary apply-job-btn">Save Job</button>
+    <div class="job-details-sidebar-containers" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; " >
+      <button class="btn-primary apply-job-btn" id="apply-btn">Apply Now</button>
       <button class="share-btn"><img src="share-icon2.png" alt="Share" class="share-icon"></button>
+    </div>
+    <div class="apply-form job-details-sidebar-containers">
+      <form id="application-form"  method="post">
+        <h3>Fill out the Application Form</h3>
+        <label class="applylabels">Name</label>
+        <input type="text" placeholder="Enter your name" class="apply-input" name="name">
+        <label class="applylabels">Email</label>
+        <input type="email" placeholder="Enter your email" class="apply-input" name="email">
+        <label class="applylabels">Phone Number</label>
+        <input type="tel" placeholder="Enter your phone number" class="apply-input" name="phone">
+          <label class="applylabels">Resume</label>
+        <input type="file" class="apply-input" name="resume">
+        <input type="submit" class="btn-primary" value="Submit Application">
+      </form>
     </div>
 
     <div class="job-details-sidebar-containers">
@@ -78,6 +116,7 @@
       </ul>
     </div>
   </aside>
-</main> 
+</main>
+<script src="jobdetails.js"></script> 
 </body>
 </html>
