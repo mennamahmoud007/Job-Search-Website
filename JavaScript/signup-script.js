@@ -65,9 +65,10 @@ if(signupForm) {
             type: isCompany ? "company" : "user",
             company: isCompany ? companyName : null
         };
-
-        localStorage.setItem("user", JSON.stringify(user));
-
+        
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
 
         const successMessage = document.getElementById("signupSuccess");
         successMessage.textContent = "Signed-up successfully!";

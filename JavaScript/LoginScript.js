@@ -10,14 +10,10 @@ if (login) {
 
         const input = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value;
-        const storedUser = JSON.parse(localStorage.getItem("user"));
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const storedUser = users.find(user => (user.username === input || user.email === input) && user.password === password);
 
-        if (!storedUser) {
-            alert("No account found. Please sign up first.");
-            return;
-        }
-        const Match =(storedUser.username === input || storedUser.email === input) && storedUser.password === password;
-        if (Match) {
+        if (storedUser) {
             localStorage.setItem("currentUser", JSON.stringify(storedUser));
 
             if (storedUser.type === "company") {
