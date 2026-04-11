@@ -9,10 +9,11 @@ if (addjobForm) {
 
 
     //for company name auto fill in add form
-    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    const CurrentUser = JSON.parse(localStorage.getItem("currentUser"));
     const companyNameField = document.getElementById("company-name");
-    if (loggedUser && loggedUser.company && companyNameField) {
-        companyNameField.value = loggedUser.company;
+
+    if (CurrentUser && CurrentUser.company && companyNameField) {
+        companyNameField.value = CurrentUser.company;
         companyNameField.readOnly = true;//read only to prevent change
     }
 
@@ -50,7 +51,7 @@ if (addjobForm) {
         let job = {
             id: id,
             title: title,
-            applications: applications,
+            applications: 0, // Initialize applications to 0
             schedule: schedule,
             category: category,
             status: status,
@@ -66,8 +67,7 @@ if (addjobForm) {
             industry: industry,
             companySize: companySize,
             location: location,
-            creator: creator,
-            applications: 0 // Initialize applications to 0 
+            creator: creator, 
         };
 
         // Add new job to jobs array
