@@ -160,6 +160,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   transition: background 0.2s, transform 0.2s;
+  cursor:pointer;
 }
 
 .btn-primary:hover {
@@ -176,6 +177,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   transition: all 0.2s;
+  cursor:pointer;
 }
 
 .btn-secondary:hover {
@@ -502,8 +504,9 @@ footer {
 .job-details-page {
   display: flex;
   justify-content: space-between;
-  margin-right: 110px;
-  margin-left: 110px;
+  max-width: 1300px;
+  margin:0 auto;
+  padding : 0 60px;
 }
 
 #job-details-sidebar {
@@ -512,11 +515,12 @@ footer {
   justify-content: start;
   flex: 1;
   margin-top: 20px;
+  max-width: 360px;
 }
 
 .job-details-sidebar-containers {
   padding: 20px;
-  border: 1.5px solid #ddd;
+  border: 1.5px solid var(--light);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
@@ -526,10 +530,9 @@ footer {
 
 .job-details-main-containers {
   padding: 20px;
-  border: 1.5px solid #ddd;
+  border: 1.5px solid var(--light);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .job-details-main-container {
@@ -538,6 +541,7 @@ footer {
   justify-content: space-between;
   flex: 3;
   margin-top: 20px;
+  gap:20px;
 }
 
 #application-form {
@@ -555,13 +559,28 @@ footer {
       }
       .apply-input {
         padding: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid var(--light);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         font-size: 16px;
+        border-radius: 8px;
       }
       .apply-form{
         display:none;
       }
+      .job-details-page h1,
+      .job-details-page h2 {
+         color: #8455ba;
+         font-weight: bold;
+      }
+
+      .job-details-page ul {
+        list-style-type: none;
+       }
+
+      .job-details-page li {
+       margin-bottom: 10px;
+       font-size: 18px;
+      } 
       
 
 /* Sign-up form  */
