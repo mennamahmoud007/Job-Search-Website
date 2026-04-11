@@ -6,6 +6,10 @@ const jobListTag = document.querySelector('.job-list');
 const allJobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
 function displayJobs(jobsToRender) {
+    if (jobsToRender.length === 0) {
+    jobListTag.innerHTML = `<p class="no-results">No jobs matching`;
+    return;
+}
     let html = "";
     jobsToRender.forEach(job => {
         html += `
@@ -30,27 +34,27 @@ function displayJobs(jobsToRender) {
 // WHEN any checkbox changes, run this function
 function filterjobs(){
     //Get the values of all checked boxes
-    const scheduleValues = Array.from(
+        const scheduleValues = Array.from(
         document.querySelectorAll(`input[name="schedule"]:checked`))
         .map(cb => cb.value);
         const locationValues = Array.from(
-            document.querySelectorAll(`input[name="location"]:checked`))
-            .map(cb => cb.value);
-            const experienceValues = Array.from(
-                document.querySelectorAll(`input[name="experience"]:checked`))
-                .map(cb => cb.value);
-                const searchvalue = document.querySelector('#job-search').value.toLowerCase();  
-                //filter each job based on all filters
-                const filteredjobs = allJobs.filter(function(job){
-                    if(scheduleValues.length > 0 && !scheduleValues.includes(job.schedule))
-                        return false;
-                    if(locationValues.length > 0 && !locationValues.includes(job.location))
-                        return false;
-                    if(experienceValues.length > 0 && !experienceValues.includes(job.experience))
-                        return false;
-                    if(searchvalue && !job.title.toLowerCase().includes(searchvalue))
-                        return false;
-                    return true;
+        document.querySelectorAll(`input[name="location"]:checked`))
+        .map(cb => cb.value);
+        const experienceValues = Array.from(
+        document.querySelectorAll(`input[name="experience"]:checked`))
+        .map(cb => cb.value);
+        const searchvalue = document.querySelector('#job-search').value.toLowerCase();  
+        //filter each job based on all filters
+        const filteredjobs = allJobs.filter(function(job){
+            if(scheduleValues.length > 0 && !scheduleValues.includes(job.schedule))
+                return false;
+            if(locationValues.length > 0 && !locationValues.includes(job.location))
+                return false;
+            if(experienceValues.length > 0 && !experienceValues.includes(job.experience))
+                return false;
+            if(searchvalue && !job.title.toLowerCase().includes(searchvalue))
+                return false;
+            return true;
     });
     displayJobs(filteredjobs); //only shows the matching cards
 }
