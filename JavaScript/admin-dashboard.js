@@ -1,7 +1,7 @@
 //  Admin Dashboard Page
 
 //Company Name from localStorage to put in thr title 
-const user = JSON.parse(localStorage.getItem("user")); // string => object
+const user = JSON.parse(localStorage.getItem("currentUser")); // string => object
 
 const dashboardTitle = document.getElementById("dashboard-title"); //dashboard's title 
 
@@ -88,7 +88,7 @@ if (jobsGrid) {
                 </div>
                 <div class="card-footer">
                     <div class="card-actions">
-                        <a href="add-job.html" style="background:var(--deep); padding:7px 14px; border-radius:8px;">Edit</a>
+                        <a href="edit-job.html?id=${job.id}" style="background:var(--deep); padding:7px 14px; border-radius:8px;">Edit</a>
                         <a href="#" class="delete-link" style="background:#c0392b; padding:7px 14px; border-radius:8px;" data-index="${index}">Delete</a>
                     </div>
                     <a href="job-details.html?id=${job.id}" class="btn-view">View Job Details</a>
