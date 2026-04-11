@@ -6,28 +6,28 @@ const currentJob = allJobsData.find(j => j.id == idFromUrl);
 if (currentJob) {
 
     document.getElementById('job-title').textContent = currentJob.title;
-    document.getElementById('company-name').textContent = `Company: ${currentJob.company}`;
-    document.getElementById('location').textContent = `Location: ${currentJob.location}`;
-    document.getElementById('schedule').textContent = `Schedule: ${currentJob.schedule}`;
+    document.getElementById('company-name').innerHTML = `<strong>Company:</strong> ${currentJob.company}`;
+    document.getElementById('location').innerHTML = `<strong>Location:</strong> ${currentJob.location}`;
+    document.getElementById('schedule').innerHTML = `<strong>Schedule:</strong> ${currentJob.schedule}`;
 
-    if(document.getElementById('job-desc')) document.getElementById('job-desc').textContent = `Description: ${currentJob.description}`;
-    if(document.getElementById('job-salary')) document.getElementById('job-salary').textContent = `Salary: ${currentJob.salary}`;
-    if(document.getElementById('job-exp')) document.getElementById('job-exp').textContent = `Experience: ${currentJob.experience}`;
-    if(document.getElementById('job-gender')) document.getElementById('job-gender').textContent = `Gender: ${currentJob.gender}`;
-    if(document.getElementById('job-edu')) document.getElementById('job-edu').textContent = `Education: ${currentJob.education}`;
-    if(document.getElementById('tech-skills')) document.getElementById('tech-skills').textContent = `Tech Skills: ${currentJob.techSkills}`;
-    if(document.getElementById('soft-skills')) document.getElementById('soft-skills').textContent = `Soft Skills: ${currentJob.softSkills}`;
-    if(document.getElementById('company-industry')) document.getElementById('company-industry').textContent = `Industry: ${currentJob.industry}`;
+    if(document.getElementById('job-desc')) document.getElementById('job-desc').innerHTML = `<strong>Description:</strong> ${currentJob.description}`;
+    if(document.getElementById('job-salary')) document.getElementById('job-salary').innerHTML = `<strong>Salary:</strong> ${currentJob.salary}`;
+    if(document.getElementById('job-exp')) document.getElementById('job-exp').innerHTML = `<strong>Experience:</strong> ${currentJob.experience}`;
+    if(document.getElementById('job-gender')) document.getElementById('job-gender').innerHTML = `<strong>Gender:</strong> ${currentJob.gender}`;
+    if(document.getElementById('job-edu')) document.getElementById('job-edu').innerHTML = `<strong>Education:</strong> ${currentJob.education}`;
+    if(document.getElementById('tech-skills')) document.getElementById('tech-skills').innerHTML = `<strong>Tech Skills:</strong> ${currentJob.techSkills}`;
+    if(document.getElementById('soft-skills')) document.getElementById('soft-skills').innerHTML = `<strong>Soft Skills:</strong> ${currentJob.softSkills}`;
+    if(document.getElementById('company-industry')) document.getElementById('company-industry').innerHTML = `<strong>Industry:</strong> ${currentJob.industry}`;
 
-    if(document.getElementById('company-size')) document.getElementById('company-size').textContent = `Company Size: ${currentJob.companySize}`;
-    if(document.getElementById('job-id')) document.getElementById('job-id').textContent = `Job ID: ${currentJob.id}`;
-    if(document.getElementById('job-type')) document.getElementById('job-type').textContent = `Job Type: ${currentJob.type}`;
-    if(document.getElementById('job-category')) document.getElementById('job-category').textContent = `Job Category: ${currentJob.category}`;
-    if(document.getElementById('company-location')) document.getElementById('company-location').textContent = `Company Location: ${currentJob.companyLocation}`;
-  
+    if(document.getElementById('company-size')) document.getElementById('company-size').innerHTML = `<strong>Company Size:</strong> ${currentJob.companySize}`;
+    if(document.getElementById('job-id')) document.getElementById('job-id').innerHTML = `<strong>Job ID:</strong> ${currentJob.id}`;
+    if(document.getElementById('job-type')) document.getElementById('job-type').innerHTML = `<strong>Job Type:</strong> ${currentJob.type}`;
+    if(document.getElementById('job-category')) document.getElementById('job-category').innerHTML = `<strong>Job Category:</strong> ${currentJob.category}`;
+    if(document.getElementById('company-location')) document.getElementById('company-location').innerHTML = `<strong>Company Location:</strong> ${currentJob.companyLocation}`;
+
     const benefitsList = document.getElementById('benefits-list');
     if (benefitsList && currentJob.benefits) {
-        benefitsList.innerHTML = currentJob.benefits.split(',').map(b => `<li>${b.trim()}</li>`).join('');
+        benefitsList.innerHTML = currentJob.benefits.split(',').map(b => `<li><strong>${b.trim()}</strong></li>`).join('');
     }
 
     const similarJobsList = document.querySelector('#similar-jobs-list');
