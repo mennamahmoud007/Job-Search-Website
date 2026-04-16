@@ -20,9 +20,10 @@ if (editjobForm) {
 
         // Pre-fill form with existing job data
         document.getElementById("job-title").value = jobToEdit.title || "";
-        document.getElementById("job-schedule").value = jobToEdit.schedule || "";
+        document.getElementById("job-schedule").value = jobToEdit.schedule.toLowerCase() || "";
         document.getElementById("category").value = jobToEdit.category || "";
         document.getElementById("status").value = jobToEdit.status || "";
+        document.getElementById("applications").value = jobToEdit.applications || 0;
         document.getElementById("job-description").value = jobToEdit.description || "";
         document.getElementById("job-salary").value = jobToEdit.salary || "";
         document.getElementById("education").value = jobToEdit.education || "";
@@ -35,6 +36,7 @@ if (editjobForm) {
         document.getElementById("industry").value = jobToEdit.industry || "";
         document.getElementById("company-size").value = jobToEdit.companySize || "";
         document.getElementById("location").value = jobToEdit.location || "";
+        document.getElementById("company-location").value = jobToEdit.companyLocation || "";
         document.getElementById("creator").value = jobToEdit.creator || "";
     }
     
@@ -48,10 +50,11 @@ if (editjobForm) {
         jobToEdit.schedule = document.getElementById("job-schedule").value;
         jobToEdit.category = document.getElementById("category").value.trim();
         jobToEdit.status = document.getElementById("status").value;
+        jobToEdit.applications = parseInt(document.getElementById("applications").value.trim()) || 0;
         jobToEdit.description = document.getElementById("job-description").value.trim();
         jobToEdit.salary = document.getElementById("job-salary").value.trim();
         jobToEdit.education = document.getElementById("education").value;
-        jobToEdit.experience = document.getElementById("experience").value.trim();
+        jobToEdit.experience = document.getElementById("experience").value;
         jobToEdit.gender = document.getElementById("gender").value;
         jobToEdit.techSkills = document.getElementById("tech-skills").value.trim();
         jobToEdit.softSkills = document.getElementById("soft-skills").value.trim();
@@ -60,6 +63,7 @@ if (editjobForm) {
         jobToEdit.industry = document.getElementById("industry").value.trim();
         jobToEdit.companySize = document.getElementById("company-size").value.trim();
         jobToEdit.location = document.getElementById("location").value.trim();
+        jobToEdit.companyLocation = document.getElementById("company-location").value.trim();
         jobToEdit.creator = document.getElementById("creator").value.trim(); 
 
         // Update the job in the array 

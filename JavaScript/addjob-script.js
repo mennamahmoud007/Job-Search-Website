@@ -40,6 +40,7 @@ if (addjobForm) {
         let industry = document.getElementById("industry").value.trim();
         let companySize = document.getElementById("company-size").value.trim();
         let location = document.getElementById("location").value.trim();
+        let companyLocation = document.getElementById("company-location").value.trim();
         let creator = document.getElementById("creator").value.trim();
 
         // Get existing jobs from localStorage or initialize array
@@ -67,6 +68,7 @@ if (addjobForm) {
             industry: industry,
             companySize: companySize,
             location: location,
+            companyLocation: companyLocation,
             creator: creator, 
         };
 
