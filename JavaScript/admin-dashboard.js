@@ -15,8 +15,8 @@ if (user && user.type === "company" && user.company) { //if user id company
 const allJobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
 // only jobs belong to this company
-const companyJobs = user && user.company //check if user is found 
-    ? allJobs.filter(job => job.company === user.company) //compare company name in job with user company
+const companyJobs = user && user.company
+    ? allJobs.filter(job => job.company?.toLowerCase() === user.company.toLowerCase())
     : allJobs;
 
 // update Stats 

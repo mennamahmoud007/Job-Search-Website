@@ -74,6 +74,9 @@ if(signupForm) {
         successMessage.textContent = "Signed-up successfully!";
         successMessage.style.display = "block";
 
+
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        
         setTimeout(() => {
             successMessage.style.display = "none";
 
