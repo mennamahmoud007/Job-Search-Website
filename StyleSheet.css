@@ -40,10 +40,6 @@ body {
   letter-spacing: 2px;
 }
 
-.logo span {
-  color: var(--white);
-}
-
 /* Navigation Links */
 .navLinks {
   list-style: none;
