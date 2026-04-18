@@ -3,6 +3,10 @@
 //Company Name from localStorage to put in thr title 
 const user = JSON.parse(localStorage.getItem("currentUser")); // string => object
 
+if (!user) {
+    window.location.href = "login.html";
+}
+
 const dashboardTitle = document.getElementById("dashboard-title"); //dashboard's title 
 
 if (user && user.type === "company" && user.company) { //if user id company
